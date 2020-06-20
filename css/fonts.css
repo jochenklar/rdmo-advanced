@@ -1,0 +1,20 @@
+@font-face {
+    font-family: "DroidSans";
+    src: url("../fonts/DroidSans.ttf");
+}
+@font-face {
+    font-family: "DroidSans";
+    src: url("../fonts/DroidSans-Bold.ttf"); font-weight: bold;
+}
+@font-face {
+    font-family: "DroidSansMono";
+    src: url("../fonts/DroidSansMono.ttf");
+}
+@font-face {
+    font-family: "DroidSerif";
+    src: url("../fonts/DroidSerif.ttf");
+}
+@font-face {
+    font-family: "DroidSerif";
+    src: url("../fonts/DroidSerif-Bold.ttf"); font-weight: bold;
+}
