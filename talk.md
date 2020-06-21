@@ -922,18 +922,31 @@ Jedes HTML-Template und jede CSS Datei kann überschrieben werden. Für CSS kann
 
 ---
 
-### Logging
+### Logging & Management-Scripte
 
-Logging sollte in der `config/settings/local.py` konfiguriert werden. In der Regel werden folgende Logs geschrieben:
+Logging sollte in der `config/settings/local.py` konfiguriert werden:
 
-* `/var/log/rdmo/rdmo.log` interne, von RDMO implementierte Logs.
-* `/var/log/rdmo/error.log` Error-Messages bei Server-Error, auch per Mail an `ADMINS`.
+```bash
+/var/log/rdmo/rdmo.log                  # interne, von RDMO implementierte Logs.
+/var/log/rdmo/error.log                 # Error-Messages bei Server-Error, auch per Mail an `ADMINS`.
+/var/log/gunicorn/access.log            # gunicorn Access-Log (nur für gunicorn-Setup)
+/var/log/gunicorn/error.log             # gunicorn Error-Log (nur für gunicorn-Setup)
+/var/log/httpd/access.log               # Apache Access-Log (alternativ /var/log/apache2, /var/log/nginx)
+/var/log/httpd/error.log                # Apache Error-Log (alternativ /var/log/apache2, /var/log/nginx)
+```
 
-* `/var/log/gunicorn/access.log` gunicorn Access-Log (nur für gunicorn-Setup)
-* `/var/log/gunicorn/error.log` gunicorn Error-Log (nur für gunicorn-Setup)
+Management-Scripte werden in der Virtual-Env mit `python manage.py ...` ausgeführt:
 
-* `/var/log/httpd/access.log` Apache Access-Log (alternativ NGINX)
-* `/var/log/httpd/error.log` Apache Error-Log (alternativ NGINX)
+```bash
+python manage.py createsuperuser        # erstellt einen Admin (superuser)
+python manage.py deploy                 # collectstatic & touch config/wsgi.py
+python manage.py download_vendor_files  # Läd JS und CSS Files von den CDN
+python manage.py import                 # Importiert RDMO XML File
+python manage.py set_uri_prefix         # Setzt uri_prefix für allen Content
+python manage.py setup_groups           # Erstellt editor, reviewer und api Gruppen
+python manage.py migrate                # Wendet Datenbankmigrationen an
+python manage.py collectstatic          # Kopiert statische Files nach static_root
+```
 
 ---
 
