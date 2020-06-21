@@ -14,7 +14,7 @@ class: title, center, middle
 
 ## Ablauf
 
-* **09:00 Uhr** Einführung und Organisatorisches
+* **09:00 Uhr** Einführung und Organisatorisches, kurze Vorstellungsrunde
 * **09:15 - 10:00 Uhr** Block 1: Content-Management
     * Fragen, Optionen und Attribute
 * **10:15 - 11:00 Uhr** Block 2: Content-Management
@@ -22,12 +22,128 @@ class: title, center, middle
 * **11:15 - 12:00 Uhr** Block 3: Schnittstellen und Austausch
     * Import und Export, API, Plugins
 * **12:15 - 13:00 Uhr** Block 4: Administration und Konfiguration
-    * Django-Admin Interface, Updates, Themes, App, Authentifizierung
+    * Django-Admin Interface, Updates, App, Authentifizierung, Themes
 ---
 
-class: center, middle
+Projekt RDMO
+------------
 
-##### Kurze Vorstellungsrunde
+<style>
+.team {
+    text-align: center;
+    font-size: 0.6em;
+    margin-top: 40px;
+}
+.team .row {
+    height: 180px;
+}
+.team .item {
+  display: inline-block;
+  width: 180px;
+}
+.team img {
+    width: 120px;
+    height: 120px;
+
+    border-radius: 50%;
+
+    margin-bottom: 10px;
+}
+.partner {
+    text-align: center;
+    margin-top: 10px;
+}
+.partner .item {
+    display: inline-block;
+    margin-top: 10px;
+}
+.partner p {
+    margin: 0;
+}
+.partner .item {
+    vertical-align: top;
+}
+.partner .aip img {
+    height: 55px;
+}
+.partner .fhp img {
+    margin-left: 20px;
+    margin-top: 10px;
+    height: 50px;
+}
+.partner .kit img {
+    margin-left: 10px;
+    height: 55px;
+}
+.partner .dfg img {
+    margin-left: 40px;
+    height: 50px;
+}
+</style>
+
+2 Projektphasen 2015 - 2020, gefördert von der DFG.
+
+<div class="team">
+  <div class="row">
+    <div class="item">
+      <img src="img/team/enke.jpg" /><br />
+      <div>Harry Enke (AIP)</div>
+    </div>
+    <div class="item">
+      <img src="img/team/klar.jpg" />
+      <div>Jochen Klar (selbst.)</div>
+    </div>
+    <div class="item">
+      <img src="img/team/kramer.jpg" />
+      <div>Claudia Kramer (KIT)</div>
+    </div>
+    <div class="item">
+      <img src="img/team/ludwig.jpg" />
+      <div>Jens Ludwig (SPK)</div>
+    </div>
+    <div class="item">
+      <img src="img/team/michaelis.jpg" />
+      <div>Olaf Michaelis (AIP)</div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="item">
+      <img src="img/team/neuroth.jpg" /><br />
+      <div>Heike Neuroth (FHP)</div>
+    </div>
+    <div class="item">
+      <img src="img/team/straka.jpg" />
+      <div>Janine Straka (FHP)</div>
+    </div>
+    <div class="item">
+      <img src="img/team/ulrich.jpeg" />
+      <div>Robert Ulrich (KIT)</div>
+    </div>
+    <div class="item">
+      <img src="img/team/wedlich.jpg" />
+      <div>Kerstin Wedlich (KIT)</div>
+    </div>
+    <div class="item">
+      <img src="img/team/wuttke.jpg" />
+      <div>Ulrike Wuttke (FHP)</div>
+    </div>
+  </div>
+</div>
+
+.partner[
+  .item.aip[
+    ![AIP](img/partner/aip_de.svg)
+  ]
+  .item.fhp[
+    ![FHP](img/partner/fhp.svg)
+  ]
+  .item.kit[
+    ![KIT](img/partner/kit.svg)
+  ]
+  .item.dfg[
+    ![DFG](img/partner/dfg.jpg)
+  ]
+]
 
 ---
 
@@ -42,12 +158,12 @@ class: center, middle
 **Softwaregruppe**
 
 * Koordiniert die Weiterentwicklung der Software
-* Sprecher: Jochen Klar, Slack-Channel: *#development*
+* Sprecher: Jochen Klar, Slack: *#development*, GitHub: [rdmo](https://github.com/rdmorganiser/rdmo), [rdmo-app](https://github.com/rdmorganiser/rdmo-app), [rdmo-plugins](https://github.com/rdmorganiser/rdmo-plugins)
 
 **Content-Gruppe**
 
 * Koordiniert die Weiterentwicklung von Fragenkatalogen, Domänenmodell, etc.
-* Sprecher: Kerstin Wedlich-Zachodin (KIT), Slack-Channel: *#content*
+* Sprecher: Kerstin Wedlich-Zachodin (KIT), Slack: *#content*, GitHub: [rdmo-catalog](https://github.com/rdmorganiser/rdmo-catalog)
 
 ---
 
@@ -66,7 +182,7 @@ class: title, center, middle
 Fragenkataloge (mit Abschnitten, Fragensets, Fragen), Attribute, Optionensets (mit Optionen), Bedingungen, Ansichten und Aufgaben werden in RDMO allgemein als **Content** bezeichnet und können über das **Management-Menü** durch Admins und Mitglieder der *Editor* Gruppe editiert werden. Mitglieder der *Reviewer* Gruppe können die Management Interfaces ansehen, aber nichts ändern.
 
 .center.w75.shadow[
-    ![](img/management.png)
+    ![](img/screen/management.png)
 ]
 
 ---
@@ -74,7 +190,7 @@ Fragenkataloge (mit Abschnitten, Fragensets, Fragen), Attribute, Optionensets (m
 ### Fragenkataloge
 
 .center.w66[
-    ![](img/question.svg)
+    ![](img/fig/question.svg)
 ]
 
 * Das **strukturierte Interview** wird mithilfe von Katalogen, Abschnitten, Fragensets und Fragen konfiguriert. Eine einzelne Installation von RDMO kann mehrere Kataloge haben. Für ein Projekt muss einer dieser Kataloge ausgewählt werden.
@@ -89,7 +205,7 @@ Ein Katalog besteht aus einer Reihe von Abschnitten, die ihrerseits Fragensets e
 #### Fragen-Management
 
 .center.w75.shadow[
-    ![](img/questions.png)
+    ![](img/screen/questions.png)
 ]
 
 ---
@@ -97,7 +213,7 @@ Ein Katalog besteht aus einer Reihe von Abschnitten, die ihrerseits Fragensets e
 ##### Einfache Fragen
 
 .center.w75.shadow[
-    ![](img/question1-screen.png)
+    ![](img/screen/question1-screen.png)
 ]
 
 ---
@@ -105,7 +221,7 @@ Ein Katalog besteht aus einer Reihe von Abschnitten, die ihrerseits Fragensets e
 ##### Einfache Fragen
 
 .center.w75.shadow[
-    ![](img/question1-modal1.png)
+    ![](img/screen/question1-modal1.png)
 ]
 
 ---
@@ -113,7 +229,7 @@ Ein Katalog besteht aus einer Reihe von Abschnitten, die ihrerseits Fragensets e
 ##### Einfache Fragen
 
 .center.w75.shadow[
-    ![](img/question1-modal2.png)
+    ![](img/screen/question1-modal2.png)
 ]
 
 ---
@@ -121,7 +237,7 @@ Ein Katalog besteht aus einer Reihe von Abschnitten, die ihrerseits Fragensets e
 #### Frage mit mehreren Antworten
 
 .center.w75.shadow[
-    ![](img/question1-screen.png)
+    ![](img/screen/question1-screen.png)
 ]
 
 ---
@@ -129,7 +245,7 @@ Ein Katalog besteht aus einer Reihe von Abschnitten, die ihrerseits Fragensets e
 ##### Frage mit mehreren Antworten
 
 .center.w75.shadow[
-    ![](img/question2-modal1.png)
+    ![](img/screen/question2-modal1.png)
 ]
 
 ---
@@ -137,7 +253,7 @@ Ein Katalog besteht aus einer Reihe von Abschnitten, die ihrerseits Fragensets e
 ##### Frage mit mehreren Antworten
 
 .center.w75.shadow[
-    ![](img/question2-modal2.png)
+    ![](img/screen/question2-modal2.png)
 ]
 
 ---
@@ -145,7 +261,7 @@ Ein Katalog besteht aus einer Reihe von Abschnitten, die ihrerseits Fragensets e
 ##### Frage mit mehreren Antworten
 
 .center.w75.shadow[
-    ![](img/question1-screen.png)
+    ![](img/screen/question1-screen.png)
 ]
 
 ---
@@ -180,7 +296,7 @@ Ein Katalog besteht aus einer Reihe von Abschnitten, die ihrerseits Fragensets e
 #### Fragensets
 
 .center.w75.shadow[
-    ![](img/questionset1-modal.png)
+    ![](img/screen/questionset1-modal.png)
 ]
 
 ---
@@ -188,7 +304,7 @@ Ein Katalog besteht aus einer Reihe von Abschnitten, die ihrerseits Fragensets e
 #### Fragensets mit Tabs
 
 .center.w75.shadow[
-    ![](img/questionset2-screen.png)
+    ![](img/screen/questionset2-screen.png)
 ]
 
 ---
@@ -196,7 +312,7 @@ Ein Katalog besteht aus einer Reihe von Abschnitten, die ihrerseits Fragensets e
 ##### Fragensets mit Tabs
 
 .center.w75.shadow[
-    ![](img/questionset2-modal1.png)
+    ![](img/screen/questionset2-modal1.png)
 ]
 
 ---
@@ -204,7 +320,7 @@ Ein Katalog besteht aus einer Reihe von Abschnitten, die ihrerseits Fragensets e
 ##### Fragensets mit Tabs
 
 .center.w75.shadow[
-    ![](img/questionset2-modal2.png)
+    ![](img/screen/questionset2-modal2.png)
 ]
 
 ---
@@ -212,7 +328,7 @@ Ein Katalog besteht aus einer Reihe von Abschnitten, die ihrerseits Fragensets e
 ##### Fragensets mit Tabs
 
 .center.w75.shadow[
-    ![](img/questionset2-screen.png)
+    ![](img/screen/questionset2-screen.png)
 ]
 
 ---
@@ -220,7 +336,7 @@ Ein Katalog besteht aus einer Reihe von Abschnitten, die ihrerseits Fragensets e
 ##### Fragensets mit Tabs
 
 .center.w66[
-    ![](img/questionset.svg)
+    ![](img/screen/questionset.svg)
 ]
 
 * Fragensets mit Tabs haben ein Fragenset-Attribut zugeordnet (z.B. `project/dataset`).
@@ -247,7 +363,7 @@ Ein Katalog besteht aus einer Reihe von Abschnitten, die ihrerseits Fragensets e
 #### Attribute
 
 .center.w75.shadow[
-    ![](img/domain.png)
+    ![](img/screen/domain.png)
 ]
 
 ---
@@ -255,7 +371,7 @@ Ein Katalog besteht aus einer Reihe von Abschnitten, die ihrerseits Fragensets e
 #### Attribute
 
 .center.w75.shadow[
-    ![](img/domain-modal.png)
+    ![](img/screen/domain-modal.png)
 ]
 
 ---
@@ -263,7 +379,7 @@ Ein Katalog besteht aus einer Reihe von Abschnitten, die ihrerseits Fragensets e
 ### Fragen mit Optionen
 
 .center.w75.shadow[
-    ![](img/question-option-screen.png)
+    ![](img/screen/question-option-screen.png)
 ]
 
 ---
@@ -271,7 +387,7 @@ Ein Katalog besteht aus einer Reihe von Abschnitten, die ihrerseits Fragensets e
 ### Optionen
 
 .center.w66[
-    ![](img/options.svg)
+    ![](img/fig/options.svg)
 ]
 
 * Fragen bekommen Optionensets zugeordnet.
@@ -282,7 +398,7 @@ Ein Katalog besteht aus einer Reihe von Abschnitten, die ihrerseits Fragensets e
 ### Optionen
 
 .center.w75.shadow[
-    ![](img/question-option-modal.png)
+    ![](img/screen/question-option-modal.png)
 ]
 
 ---
@@ -290,7 +406,7 @@ Ein Katalog besteht aus einer Reihe von Abschnitten, die ihrerseits Fragensets e
 ### Optionensets
 
 .center.w75.shadow[
-    ![](img/optionsets-screen.png)
+    ![](img/screen/optionsets-screen.png)
 ]
 
 ---
@@ -298,7 +414,7 @@ Ein Katalog besteht aus einer Reihe von Abschnitten, die ihrerseits Fragensets e
 ### Optionensets
 
 .center.w75.shadow[
-    ![](img/optionset-modal.png)
+    ![](img/screen/optionset-modal.png)
 ]
 
 ---
@@ -306,7 +422,7 @@ Ein Katalog besteht aus einer Reihe von Abschnitten, die ihrerseits Fragensets e
 ### Optionen
 
 .center.w75.shadow[
-    ![](img/option-modal.png)
+    ![](img/screen/option-modal.png)
 ]
 
 ---
@@ -332,11 +448,11 @@ class: center, middle
 ### Bedingungen
 
 .center.w66[
-    ![](img/conditions.svg)
+    ![](img/fig/conditions.svg)
 ]
 
 * Über Bedingungen können Fragensets übersprungen werden.
-* Bedingungen werten zuvor einegebene Werte für ein Attribut aus.
+* Bedingungen werten zuvor eingegebene Werte für ein Attribut aus.
 * Bei mehreren Bedingungen muss nur eine zutreffen (logisches ODER).
 
 ---
@@ -344,7 +460,7 @@ class: center, middle
 ### Bedingungen für Optionen
 
 .center.w66[
-    ![](img/conditions-options.svg)
+    ![](img/fig/conditions-options.svg)
 ]
 
 * Es können auch Optionensets ausgelassen werden (bei mehreren Sets pro Frage).
@@ -354,7 +470,7 @@ class: center, middle
 ### Bedingungen
 
 .center.w75.shadow[
-    ![](img/conditions.png)
+    ![](img/screen/conditions.png)
 ]
 
 ---
@@ -362,7 +478,7 @@ class: center, middle
 ### Bedingungen
 
 .center.w75.shadow[
-    ![](img/condition-modal.png)
+    ![](img/screen/condition-modal.png)
 ]
 
 ---
@@ -370,7 +486,7 @@ class: center, middle
 ### Bedingungen für Fragensets
 
 .center.w75.shadow[
-    ![](img/questionset-condition-modal.png)
+    ![](img/screen/questionset-condition-modal.png)
 ]
 
 ---
@@ -378,7 +494,7 @@ class: center, middle
 ### Ansichten
 
 .center.w75.shadow[
-    ![](img/views-screen.png)
+    ![](img/screen/views-screen.png)
 ]
 
 ---
@@ -386,7 +502,7 @@ class: center, middle
 ### Ansichten
 
 .center.w75.shadow[
-    ![](img/view-screen.png)
+    ![](img/screen/view-screen.png)
 ]
 
 ---
@@ -394,7 +510,7 @@ class: center, middle
 ### Ansichten
 
 .center.w75.shadow[
-    ![](img/view-modal.png)
+    ![](img/screen/view-modal.png)
 ]
 
 ---
@@ -403,7 +519,7 @@ class: center, middle
 
 * Ansichten werden in der Django Template Syntax geschrieben.
 * Zusätzlich dienen RDMO spezifische `view_tags` dazu die Werte des Projektes anzusprechen.
-    * <https://rdmo.readthedocs.io/en/latest/management/views.html#view-templates>
+    * <https://rdmo.readthedocs.io/en/latest/management/views.html>
 * Über [django-mathfilters](https://pypi.org/project/django-mathfilters/) kann auch mit Werten gerechnet werden.
 * Ansichten können über [Pandoc](https://pandoc.org/) exportiert werden.
 * Für spezielle Layouts können Musterdokumente für `.docx` und `.odt` angelegt werden.
@@ -411,10 +527,42 @@ class: center, middle
 
 ---
 
+#### Template-Code
+
+```django
+The main research question of the project is: {% render_value 'project/research_question/title' %}
+```
+
+```django
+<p>
+    {% render_value_inline_list 'project/research_question/keywords' %}
+</p>
+```
+
+```django
+{% get_set 'project/dataset' as datasets %}
+{% for dataset in datasets %}
+    <p>
+        {% render_set_value dataset 'project/dataset/id' %}
+    </p>
+{% endfor %}
+```
+
+```django
+{% get_value 'project/dataset/sharing/yesno' as value %}
+{% if value.is_true %}
+    This will be only rendered if personal_data resolves to be true.
+{% endif %}
+```
+
+Mehr Beispiele: https://rdmo.readthedocs.io/en/latest/management/views.html.
+
+---
+
 ### Aufgaben
 
 .center.w75.shadow[
-    ![](img/tasks.png)
+    ![](img/screen/tasks.png)
 ]
 
 ---
@@ -422,7 +570,7 @@ class: center, middle
 ### Aufgaben
 
 .center.w75.shadow[
-    ![](img/task-modal.png)
+    ![](img/screen/task-modal.png)
 ]
 
 ---
@@ -430,7 +578,7 @@ class: center, middle
 ### Aufgaben
 
 .center.w75.shadow[
-    ![](img/task-condition.png)
+    ![](img/screen/task-condition.png)
 ]
 
 ---
@@ -438,7 +586,7 @@ class: center, middle
 ### Aufgaben
 
 .center.w75.shadow[
-    ![](img/task-timeframe.png)
+    ![](img/screen/task-timeframe.png)
 ]
 
 ---
@@ -513,10 +661,10 @@ https://rdmorganiser.github.io/terms/views/horizon2020
 
 ### XML Import
 
-* Import über XML upload auf den Management Seiten oder über die Command-Line auf dem Server.
+* Import über XML-Upload auf den Management Seiten oder über die Command-Line auf dem Server.
 
 .center.w75.shadow[
-    ![](img/import-screen.png)
+    ![](img/screen/import-screen.png)
 ]
 
 * Import prüft ob das Element mit der `uri` bereits vorhanden ist.
@@ -528,7 +676,7 @@ https://rdmorganiser.github.io/terms/views/horizon2020
 
 ### Austausch in der Community
 
-* In der Community entwickelter Content wird durch Projekt / Arbeitsgemeninschaft angenommen und zentral zur Verfügung gestellt.
+* In der Community entwickelter Content wird durch Projekt / Arbeitsgemeinschaft angenommen und zentral zur Verfügung gestellt.
 * GitHub Repository zum Austausch: https://github.com/rdmorganiser/rdmo-catalog
 * Issues zu Content-Fragen: https://github.com/rdmorganiser/rdmo-catalog/issues
 * Content-Gruppe koordiniert den Austausch der Inhalte:
@@ -644,37 +792,35 @@ class: title, center, middle
 Das Django-Framework bietet eine reichhaltige Administrations- (oder kurz Admin-) Schnittstelle, die es erlaubt, die meisten Einträge in der Datenbank direkt zu manipulieren.
 
 .center.w75.shadow[
-    ![](img/admin.png)
+    ![](img/screen/admin.png)
 ]
+
+---
+
+### Django-Admin
+
+Django `superuser` können prinzipiell alles, `staff` kann sich in das Admin interface einloggen.
+
+**Gruppen**: `editor` kann editieren, `reviewer` kann lesen, `api` kann über die API auf alle Inhalte zugreifen. *(ab RDMO 1.1)* Kataloge, Ansichten und Aufgaben können nur für bestimmte Gruppen freigegeben werden. Gruppen können aus LDAP oder Shibboleth übernommen werden.
+
+**Rollen**: *(ab RDMO 1.1)* User sind `member` einer Site (nur für Multi-Site relevant) und können `manager` sein.
+Site-Manager können alle Projekte (einer Site) lesen und schreiben.
+
+**Zusätzliche Felder** dienen der Erweiterung des RDMO internen User-Models (und müssen evtl. bei der Registrierung angegeben werden.).
+
+Für die Nutzung der API können **Tokens** im Admin-Interface erstellt werden.
+
+**Content** und *Nutzerdaten* können auch über das Admin-Interface editiert werden.
 
 ---
 
 ##### Sites (Websites)
 
 .center.w75.shadow[
-    ![](img/sites.png)
+    ![](img/screen/sites.png)
 ]
 
 Normalerweise gibt **ein** Eintrag den Namen (rechts oben in der Navigation) und die URL der RDMO Instanz an. Im Multi-Site-Betrieb können mehrere RDMO Sites auf einem Server und mit einer Datenbank betrieben werden. Kataloge, Ansichten und Aufgaben können dann für bestimmte Sites freigegeben werden. Die Sites verfügen über getrennte `rdmo-app` Verzeichnisse und können verschiedene Themes haben.
-
----
-
-##### Nutzer, Gruppen und Rollen
-
-**Gruppen**
-
-*Editor* kann editieren, *Reviewer* kann lesen, *Api* kann über die API auf alle Inhalte zugreifen, *Superuser* können prinzipiell alles, *Staff* kann sich in das Admin interface einloggen.
-
-(ab RDMO 1.1) Kataloge, Ansichten und Aufgaben können nur für bestimmte Gruppen freigegeben werden. Gruppen können aus dem Shibboleth übernommen werden.
-
-**Rollen**
-
-(ab RDMO 1.1) User sind *Mitglieder* einer Site (nur für Multi-Site relevant) und können *Manager* sein.
-Site-Manager können alle Projekte (einer Site) lesen und schreiben.
-
-**Token**
-
-Für die Nutzung der API können Tokens im Admin-Interface erstellt werden.
 
 ---
 
@@ -725,10 +871,10 @@ Es bietet sich an, für lokale Anpassungen eine eigene Django-App zu implementie
 * Jedes HTML-Template und jede CSS Datei kann überschrieben werden
 
 .screen-theme.screen-theme1[
-    ![Theme1](img/theme1.png)
+    ![Theme1](img/screen/theme1.png)
 ]
 .screen-theme.screen-theme2[
-    ![Theme2](img/theme2.png)
+    ![Theme2](img/screen/theme2.png)
 ]
 
 ---
@@ -773,6 +919,21 @@ Jedes HTML-Template und jede CSS Datei kann überschrieben werden. Für CSS kann
     * Großer Spaß für alle Beteiligten!
 
 `django-allauth` und LDAP können kombiniert werden, Shibboleth nicht (läuft über Apache).
+
+---
+
+### Logging
+
+Logging sollte in der `config/settings/local.py` konfiguriert werden. In der Regel werden folgende Logs geschrieben:
+
+* `/var/log/rdmo/rdmo.log` interne, von RDMO implementierte Logs.
+* `/var/log/rdmo/error.log` Error-Messages bei Server-Error, auch per Mail an `ADMINS`.
+
+* `/var/log/gunicorn/access.log` gunicorn Access-Log (nur für gunicorn-Setup)
+* `/var/log/gunicorn/error.log` gunicorn Error-Log (nur für gunicorn-Setup)
+
+* `/var/log/httpd/access.log` Apache Access-Log (alternativ NGINX)
+* `/var/log/httpd/error.log` Apache Error-Log (alternativ NGINX)
 
 ---
 
@@ -872,6 +1033,12 @@ table {
   <tr class="seperator"></tr>
   <tr>
     <td>Kontakt: </td>
+    <td>
+      <a href="mail-to:rdmo@listserv.dfn.de">rdmo@listserv.dfn.de</a>
+    </td>
+  </tr>
+  <tr>
+    <td></td>
     <td>
       <a href="mail-to:rdmo-team@listserv.dfn.de">rdmo-team@listserv.dfn.de</a>
     </td>
