@@ -15,7 +15,7 @@ class: title, center, middle
 ## Ablauf
 
 * **09:15 Uhr** Einführung und Organisatorisches, kurze Vorstellungsrunde
-* **09:15 - 10:00 Uhr** Block 1: Content-Management
+* **09:20 - 10:00 Uhr** Block 1: Content-Management
     * Fragen, Optionen und Attribute
 * **10:15 - 11:00 Uhr** Block 2: Content-Management
     * Bedingungen, Ansichten und Aufgaben
