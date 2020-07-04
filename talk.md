@@ -293,6 +293,19 @@ Ein Katalog besteht aus einer Reihe von Abschnitten, die ihrerseits Fragensets e
 
 ---
 
+##### Fragensets mit Tabs
+
+.center.w66[
+    ![](img/fig/questionset.svg)
+]
+
+* Fragensets mit Tabs haben ein Fragenset-Attribut zugeordnet (z.B. `project/dataset`).
+* Es *sollte* ein `id` Attribut für das Fragenset-Attribut existieren (z.B. `project/dataset/id`).
+* Für jedes Set wird ein Wert für das `id`-Attribut angelegt.
+* Intern haben Werte haben ein `collection_index` Feld für Fragen mit mehreren Antworten und ein `set_index` Feld für Fragensets mit Tabs.
+
+---
+
 #### Fragensets
 
 .center.w75.shadow[
@@ -330,19 +343,6 @@ Ein Katalog besteht aus einer Reihe von Abschnitten, die ihrerseits Fragensets e
 .center.w75.shadow[
     ![](img/screen/questionset2-screen.png)
 ]
-
----
-
-##### Fragensets mit Tabs
-
-.center.w66[
-    ![](img/screen/questionset.svg)
-]
-
-* Fragensets mit Tabs haben ein Fragenset-Attribut zugeordnet (z.B. `project/dataset`).
-* Es *sollte* ein `id` Attribut für das Fragenset-Attribut existieren (z.B. `project/dataset/id`).
-* Für jedes Set wird ein Wert für das `id`-Attribut angelegt.
-* Intern haben Werte haben ein `collection_index` Feld für Fragen mit mehreren Antworten und ein `set_index` Feld für Fragensets mit Tabs.
 
 ---
 
