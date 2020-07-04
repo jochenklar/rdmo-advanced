@@ -6,22 +6,23 @@ class: title, center, middle
 
 # RDMO für Fortgeschrittene
 
-### Universität Potsdam, 23.6.2020
-
 #### Jochen Klar
+
+Die Bereitstellung dieser Folien wurde ermöglicht von der [Universität Potsdam](https://www.uni-potsdam.de/). Sie können frei nachgenutzt werden. Es gilt die [CC0 1.0 Universell (CC0 1.0)
+Public Domain Dedication](https://creativecommons.org/publicdomain/zero/1.0/deed.de).
 
 ---
 
-## Ablauf
+## Inhalt
 
-* **09:15 Uhr** Einführung und Organisatorisches, kurze Vorstellungsrunde
-* **09:20 - 10:00 Uhr** Block 1: Content-Management
+* **RDMO Projekt und Arbeitsgemeinschaft**
+* Block 1: **Content-Management 1**
     * Fragen, Optionen und Attribute
-* **10:15 - 11:00 Uhr** Block 2: Content-Management
+* Block 2: **Content-Management 2**
     * Bedingungen, Ansichten und Aufgaben
-* **11:15 - 12:00 Uhr** Block 3: Schnittstellen und Austausch
+* Block 3: **Schnittstellen und Austausch**
     * Import und Export, API, Plugins
-* **12:15 - 13:00 Uhr** Block 4: Administration und Konfiguration
+* Block 4: **Administration und Konfiguration**
     * Django-Admin Interface, Updates, App, Authentifizierung, Themes
 ---
 
@@ -173,7 +174,7 @@ class: title, center, middle
     ![RDMO](img/RDMO-logo.png)
 ]
 
-## Content-Management
+## Content-Management 1
 
 ---
 
@@ -265,6 +266,8 @@ Ein Katalog besteht aus einer Reihe von Abschnitten, die ihrerseits Fragensets e
 ]
 
 ---
+
+exclude: true
 
 #### Widget-Typ
 
@@ -440,8 +443,19 @@ Ein Katalog besteht aus einer Reihe von Abschnitten, die ihrerseits Fragensets e
 ---
 
 class: center, middle
+exclude: true
 
 ##### Pause
+
+---
+
+class: title, center, middle
+
+.rdmo-logo[
+    ![RDMO](img/RDMO-logo.png)
+]
+
+## Content-Management 2
 
 ---
 
@@ -599,6 +613,7 @@ Mehr Beispiele: https://rdmo.readthedocs.io/en/latest/management/views.html.
 ---
 
 class: center, middle
+exclude: true
 
 ##### Pause
 
@@ -772,6 +787,7 @@ class CustomExport(Export):
 ---
 
 class: center, middle
+exclude: true
 
 ##### Pause
 
@@ -1054,12 +1070,6 @@ table {
     <td></td>
     <td>
       <a href="mail-to:rdmo-team@listserv.dfn.de">rdmo-team@listserv.dfn.de</a>
-    </td>
-  </tr>
-  <tr>
-    <td></td>
-    <td>
-      <a href="mail-to:mail@jochenklar.de">mail@jochenklar.de</a>
     </td>
   </tr>
 </table>
