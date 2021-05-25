@@ -4,13 +4,15 @@ class: title, center, middle
     ![RDMO](img/RDMO-logo.png)
 ]
 
-# RDMO für Fortgeschrittene
+# Research Data Management Organiser
 
-#### Jochen Klar
+## Fortgeschrittene Themen
 
 ---
 
-Die Bereitstellung dieser Folien wurde ermöglicht von der [Universität Potsdam](https://www.uni-potsdam.de/). Sie können frei nachgenutzt werden. Es gilt die [CC0 1.0 Universell (CC0 1.0) Public Domain Dedication](https://creativecommons.org/publicdomain/zero/1.0/deed.de).
+Die Bereitstellung dieser Folien wurde ermöglicht von der [Universität Potsdam](https://www.uni-potsdam.de/) und dem [Zuse-Institut Berlin (ZIB)](https://www.zib.de). Sie können frei nachgenutzt werden.
+
+Es gilt die [CC0 1.0 Universell (CC0 1.0) Public Domain Dedication](https://creativecommons.org/publicdomain/zero/1.0/deed.de).
 
 Die Folien sind mit [remark.js](https://remarkjs.com/) erstellt. Der Quellcode der Folien kann über GitHub abgerufen werden: https://github.com/jochenklar/rdmo-advanced.
 
@@ -18,157 +20,14 @@ Die Folien sind mit [remark.js](https://remarkjs.com/) erstellt. Der Quellcode d
 
 ## Inhalt
 
-* **RDMO Projekt und Arbeitsgemeinschaft**
-* Block 1: **Content-Management 1**
-    * Fragen, Optionen und Attribute
-* Block 2: **Content-Management 2**
+* Block 1: **Content-Management I**
+    * Fragenkataloge, Attribute und Optionen
+* Block 2: **Content-Management II**
     * Bedingungen, Ansichten und Aufgaben
 * Block 3: **Schnittstellen und Austausch**
     * Import und Export, API, Plugins
 * Block 4: **Administration und Konfiguration**
     * Django-Admin Interface, Updates, App, Authentifizierung, Themes
----
-
-Projekt RDMO
-------------
-
-<style>
-.team {
-    text-align: center;
-    font-size: 0.6em;
-    margin-top: 40px;
-}
-.team .row {
-    height: 180px;
-}
-.team .item {
-  display: inline-block;
-  width: 180px;
-}
-.team img {
-    width: 120px;
-    height: 120px;
-
-    border-radius: 50%;
-
-    margin-bottom: 10px;
-}
-.partner {
-    text-align: center;
-    margin-top: 10px;
-}
-.partner .item {
-    display: inline-block;
-    margin-top: 10px;
-}
-.partner p {
-    margin: 0;
-}
-.partner .item {
-    vertical-align: top;
-}
-.partner .aip img {
-    height: 55px;
-}
-.partner .fhp img {
-    margin-left: 20px;
-    margin-top: 10px;
-    height: 50px;
-}
-.partner .kit img {
-    margin-left: 10px;
-    height: 55px;
-}
-.partner .dfg img {
-    margin-left: 40px;
-    height: 50px;
-}
-</style>
-
-2 Projektphasen 2015 - 2020, gefördert von der DFG.
-
-<div class="team">
-  <div class="row">
-    <div class="item">
-      <img src="img/team/enke.jpg" /><br />
-      <div>Harry Enke (AIP)</div>
-    </div>
-    <div class="item">
-      <img src="img/team/klar.jpg" />
-      <div>Jochen Klar (selbst.)</div>
-    </div>
-    <div class="item">
-      <img src="img/team/kramer.jpg" />
-      <div>Claudia Kramer (KIT)</div>
-    </div>
-    <div class="item">
-      <img src="img/team/ludwig.jpg" />
-      <div>Jens Ludwig (SPK)</div>
-    </div>
-    <div class="item">
-      <img src="img/team/michaelis.jpg" />
-      <div>Olaf Michaelis (AIP)</div>
-    </div>
-  </div>
-  <div class="row">
-    <div class="item">
-      <img src="img/team/neuroth.jpg" /><br />
-      <div>Heike Neuroth (FHP)</div>
-    </div>
-    <div class="item">
-      <img src="img/team/straka.jpg" />
-      <div>Janine Straka (FHP)</div>
-    </div>
-    <div class="item">
-      <img src="img/team/ulrich.jpeg" />
-      <div>Robert Ulrich (KIT)</div>
-    </div>
-    <div class="item">
-      <img src="img/team/wedlich.jpg" />
-      <div>Kerstin Wedlich (KIT)</div>
-    </div>
-    <div class="item">
-      <img src="img/team/wuttke.jpg" />
-      <div>Ulrike Wuttke (FHP)</div>
-    </div>
-  </div>
-</div>
-
-.partner[
-  .item.aip[
-    ![AIP](img/partner/aip_de.svg)
-  ]
-  .item.fhp[
-    ![FHP](img/partner/fhp.svg)
-  ]
-  .item.kit[
-    ![KIT](img/partner/kit.svg)
-  ]
-  .item.dfg[
-    ![DFG](img/partner/dfg.jpg)
-  ]
-]
-
----
-
-## RDMO Arbeitsgemeinschaft
-
-**Steuerungsgruppe**
-
-* Koordiniert die Weiterentwicklung von RDMO
-* Sprecher: Harry Enke (AIP), Gerald Jagusch (UB Darmstadt)
-* *Memorandum of Understanding* in Arbeit
-
-**Softwaregruppe**
-
-* Koordiniert die Weiterentwicklung der Software
-* Sprecher: Jochen Klar, Slack: *#development*, GitHub: [rdmo](https://github.com/rdmorganiser/rdmo), [rdmo-app](https://github.com/rdmorganiser/rdmo-app), [rdmo-plugins](https://github.com/rdmorganiser/rdmo-plugins)
-
-**Content-Gruppe**
-
-* Koordiniert die Weiterentwicklung von Fragenkatalogen, Domänenmodell, etc.
-* Sprecher: Kerstin Wedlich-Zachodin (KIT), Slack: *#content*, GitHub: [rdmo-catalog](https://github.com/rdmorganiser/rdmo-catalog)
-
 ---
 
 class: title, center, middle
@@ -177,17 +36,9 @@ class: title, center, middle
     ![RDMO](img/RDMO-logo.png)
 ]
 
-## Content-Management 1
-
----
-
 ## Content-Management
 
-Fragenkataloge (mit Abschnitten, Fragensets, Fragen), Attribute, Optionensets (mit Optionen), Bedingungen, Ansichten und Aufgaben werden in RDMO allgemein als **Content** bezeichnet und können über das **Management-Menü** durch Admins und Mitglieder der *Editor* Gruppe editiert werden. Mitglieder der *Reviewer* Gruppe können die Management Interfaces ansehen, aber nichts ändern.
-
-.center.w75.shadow[
-    ![](img/screen/management.png)
-]
+### Fragenkataloge, Attribute und Optionen
 
 ---
 
@@ -197,12 +48,8 @@ Fragenkataloge (mit Abschnitten, Fragensets, Fragen), Attribute, Optionensets (m
     ![](img/fig/question.svg)
 ]
 
-* Das **strukturierte Interview** wird mithilfe von Katalogen, Abschnitten, Fragensets und Fragen konfiguriert. Eine einzelne Installation von RDMO kann mehrere Kataloge haben. Für ein Projekt muss einer dieser Kataloge ausgewählt werden.
-* Die Eingaben werden als Wert mit der Referenz auf ein Projekt und ein Attribut gespeichert.
-
-???
-
-Ein Katalog besteht aus einer Reihe von Abschnitten, die ihrerseits Fragensets enthalten, die wiederum Fragen enthalten. Abschnitte dienen zur Gliederung, Fragensets entsprechen Seiten im strukturierten Interview. Eine Frage hat einen Text, der dem Benutzer in Fettdruck angezeigt wird, und einen optionalen Hilfetext. Sie hat auch einen Widget-Typ, der bestimmt, welches Schnittstellen-Widget dem Benutzer präsentiert wird (z.B. Textfeld, Auswahlfeld, Radio-Buttons) und kann eine Einheit haben, z.B. Euro.
+* Das **strukturierte Interview** wird mithilfe von Katalogen, Abschnitten, Fragensets und Fragen konfiguriert. Eine *Instanz* von RDMO kann mehrere Kataloge haben. Für ein Projekt muss einer dieser Kataloge ausgewählt werden (kann aber gewechselt werden).
+* Die Eingaben werden als *Wert* mit der Referenz auf ein *Projekt* und ein *Attribut* gespeichert. Damit bleibt bei einem Wechsel des Katalogs der Wert erhalten.
 
 ---
 
@@ -238,7 +85,7 @@ Ein Katalog besteht aus einer Reihe von Abschnitten, die ihrerseits Fragensets e
 
 ---
 
-#### Frage mit mehreren Antworten
+#### Fragen mit mehreren Antworten
 
 .center.w75.shadow[
     ![](img/screen/question1-screen.png)
@@ -246,7 +93,7 @@ Ein Katalog besteht aus einer Reihe von Abschnitten, die ihrerseits Fragensets e
 
 ---
 
-##### Frage mit mehreren Antworten
+##### Fragen mit mehreren Antworten
 
 .center.w75.shadow[
     ![](img/screen/question2-modal1.png)
@@ -254,23 +101,13 @@ Ein Katalog besteht aus einer Reihe von Abschnitten, die ihrerseits Fragensets e
 
 ---
 
-##### Frage mit mehreren Antworten
+##### Fragen mit mehreren Antworten
 
 .center.w75.shadow[
     ![](img/screen/question2-modal2.png)
 ]
 
 ---
-
-##### Frage mit mehreren Antworten
-
-.center.w75.shadow[
-    ![](img/screen/question1-screen.png)
-]
-
----
-
-exclude: true
 
 #### Widget-Typ
 
@@ -282,6 +119,8 @@ exclude: true
 * Select drop-down
 * Range slider
 * Date picker
+* File upload
+* Autocomplete
 
 .aside[
 
@@ -299,16 +138,11 @@ exclude: true
 
 ---
 
-##### Fragensets mit Tabs
+#### Fragensets
 
-.center.w66[
-    ![](img/fig/questionset.svg)
+.center.w75.shadow[
+    ![](img/screen/question1-screen.png)
 ]
-
-* Fragensets mit Tabs haben ein Fragenset-Attribut zugeordnet (z.B. `project/dataset`).
-* Es *sollte* ein `id` Attribut für das Fragenset-Attribut existieren (z.B. `project/dataset/id`).
-* Für jedes Set wird ein Wert für das `id`-Attribut angelegt.
-* Intern haben Werte haben ein `collection_index` Feld für Fragen mit mehreren Antworten und ein `set_index` Feld für Fragensets mit Tabs.
 
 ---
 
@@ -330,6 +164,19 @@ exclude: true
 
 ##### Fragensets mit Tabs
 
+.center.w66[
+    ![](img/fig/questionset.svg)
+]
+
+* Fragensets mit Tabs haben ein Fragenset-Attribut zugeordnet (z.B. `project/dataset`).
+* Es *sollte* ein `id` Attribut für das Fragenset-Attribut existieren (z.B. `project/dataset/id`).
+* Für jedes Set wird ein Wert für das `id`-Attribut angelegt.
+* Intern haben Werte haben ein `collection_index` Feld für Fragen mit mehreren Antworten und ein `set_index` Feld für Fragensets mit Tabs.
+
+---
+
+##### Fragensets mit Tabs
+
 .center.w75.shadow[
     ![](img/screen/questionset2-modal1.png)
 ]
@@ -344,14 +191,6 @@ exclude: true
 
 ---
 
-##### Fragensets mit Tabs
-
-.center.w75.shadow[
-    ![](img/screen/questionset2-screen.png)
-]
-
----
-
 ### Domänenmodell und Attribute
 
 * Internes Vokabular aus einem Baum aus `keys`, ähnlich einer Verzeichnisstruktur:
@@ -361,7 +200,7 @@ exclude: true
 * Verbindet Fragen, Antworten (Werte), Ansichten, Aufgaben, API etc.
 * Für neue Fragen müssen in der Regel zunächst neue Attribute geschaffen werden.
 * Derzeitige Attribute sind [Kerndatensatz Forschung](https://www.kerndatensatz-forschung.de/), [CERIF](https://www.eurocris.org/cerif/main-features-cerif), [CASRAI](https://dictionary.casrai.org/Category:Terms), [FOAF](http://xmlns.com/foaf/spec/) motiviert.
-* Überarbeitung nötig (Konformität mit [maDMP](https://www.rd-alliance.org/rda-working-groups-solutions-dmp-recording-and-slides-webinar-now-available-0), [DataCite](https://schema.datacite.org/meta/kernel-4.1/), [RADAR](https://www.radar-service.eu); logische Konsistenz).
+* Herrausforderungen: Weiterentwicklung, logische Konsistenz, Migrationen, Konformität mit [maDMP](https://www.rd-alliance.org/rda-working-groups-solutions-dmp-recording-and-slides-webinar-now-available-0)/[DataCite](https://schema.datacite.org/meta/kernel-4.1/)/[RADAR](https://www.radar-service.eu), Organisation des Community-Prozesses.
 * **Domänenmodell sollte zwischen RDMO Instanzen kompatibel bleiben!**
 
 ---
@@ -435,18 +274,19 @@ exclude: true
 
 ### Bemerkungen
 
-* Fragensets und Fragen können kopiert werden. (Ganze Kataloge in RDMO 1.1.)
-* Kataloge sind immer zugänglich für die User, in Zukunft werden sie ein `public`-Flag erhalten um sie zu verbergen.
-* Ab RDMO 1.1 wird es möglich sein, Kataloge für Gruppen und Sites einzuschränken.
+* Alle Elemente können auch kopiert werden.
+* Elemente können mit dem *Gesperrt*-Flag vor versehentlichem Editieren geschützt werden.
+* Kataloge sind nur zugänglich für die User, wenn das *Verfügbar*-Flag gesetzt ist.
+* Kataloge können auf spezielle Gruppen und Sites (im Multi-Site-Setup) eingeschränkt werden.
 * Kataloge können bei laufenden Projekten durch die User umgeschaltet werden. Werte zu Attributen, die dann keine Frage mehr haben, bleiben erhalten.
 * Hilfetexte von Fragen und Fragensets können Markdown-Syntax verwenden.
+* Für Fragen können voreingestellte Antworten konfiguriert werden.
+* Fragen können als optional markiert werden.
 * Eingaben zu Fragen werden (noch) nicht inhaltlich validiert.
-* Fragen können (noch) nicht als optional oder verpflichtend markiert werden.
 
 ---
 
 class: center, middle
-exclude: true
 
 ##### Pause
 
@@ -458,7 +298,9 @@ class: title, center, middle
     ![RDMO](img/RDMO-logo.png)
 ]
 
-## Content-Management 2
+## Content-Management II
+
+### Bedingungen, Ansichten und Aufgaben
 
 ---
 
@@ -541,6 +383,7 @@ class: title, center, middle
 * Ansichten können über [Pandoc](https://pandoc.org/) exportiert werden.
 * Für spezielle Layouts können Musterdokumente für `.docx` und `.odt` angelegt werden.
     * <https://rdmo.readthedocs.io/en/latest/configuration/export-formats.html>
+* Plugins für frei programmierbare Ansichten sind in Planung.
 
 ---
 
@@ -578,6 +421,31 @@ Mehr Beispiele: https://rdmo.readthedocs.io/en/latest/management/views.html.
 
 ### Aufgaben
 
+* Aufgaben haben einen Titel und einen Text und werden mit Bedingungen verknüpft.
+* Wenn eine der Bedingungen zutrifft, wird die Aufgabe in User-Interface angezeigt.
+* Der Status eienr Aufgabe im Projekt kann durch die User verändert werden.
+* Über einen Zeitrahmen können, basierend auf vorhergehenden Werten zu bestimmten Attributen, Anfangs- und Enddaten für eine Aufgabe konfiguriert werden.
+* Aufgaben können verschickt werden:
+    * an fest konfigurierte und/oder frei wählbare Emailaddressen, oder
+    * über eine Integration in ein Projekt-Management-Tool.
+* Über Webhooks können externe Services den Status einer Aufgabe in RDMO ändern.
+* Integrationen werden über Plugins realisiert (z.Z. GitHub und GitLab).
+
+.ref[
+    Dokumentation Email: https://rdmo.readthedocs.io/en/latest/configuration/email.html#send-tasks-via-email  
+    Dokumentation Integration: https://rdmo.readthedocs.io/en/latest/configuration/plugins.html#service-providers
+]
+
+---
+
+### Aufgaben
+
+[Aufgaben unter Projekt]
+
+---
+
+### Aufgaben
+
 .center.w75.shadow[
     ![](img/screen/tasks.png)
 ]
@@ -610,13 +478,11 @@ Mehr Beispiele: https://rdmo.readthedocs.io/en/latest/management/views.html.
 
 ### Aufgaben
 
-* Aufgaben sind noch nicht vollständig implementiert und bieten derzeit nur geringen Mehrwert.
-* Verknüpfung mit Issue-Tracken und Projektmanagement-Software ist in Planung und wird im Herbst 2020 released.
+[Aufgabe senden]
 
 ---
 
 class: center, middle
-exclude: true
 
 ##### Pause
 
@@ -652,7 +518,7 @@ class: title, center, middle
 </rdmo>
 ```
 
-* Alle Elemente können über XML Dateien exportiert und importiert werden. Zur Zeit nur grob-granular (Ein Fragenkatalog, alle Optionensets, etc.), ab Herbst 2020 auch einzeln.
+* Alle Elemente können über XML Dateien exportiert und importiert werden. Dies kann per Element erfolgen (z.B. ein ganzer Fragenkatalog, aber auch einzelne Fragen).
 * URI dient zur Identifikation einzelner Elemente.
 
 ---
@@ -669,10 +535,10 @@ https://rdmorganiser.github.io/terms/domain/project/dataset/format
 https://rdmorganiser.github.io/terms/views/horizon2020
 ```
 
-* URI setzt sich zusammen aus `uri_prefix`, dem RDMO Modul und dem `path`.
+* URI setzt sich zusammen aus `uri_prefix`, der Django "App" und dem `path`.
 * `uri_prefix` soll von der Institution frei gewählt werden, muss aber die Form eine URL haben. (Die URI muss aber nicht "auflösen".)
-* Vom RDMO-Projekt erarbeiteter Content hat den `uri_prefix` `https://rdmorganiser.github.io/terms/`.
-* Der `path` setzt sich zusammen aus den `keys` der einzelnen Elemente.
+* Von der RDMO Arbeitsgemeinschaft gepflegter Content hat den `uri_prefix` `https://rdmorganiser.github.io/terms/`.
+* Der `path` setzt sich (automatisch) aus den `keys` der einzelnen Elemente zusammen.
 * Beim Import prüft RDMO anhand der URI ob ein Element schon vorhanden ist.
 
 ---
@@ -687,8 +553,8 @@ https://rdmorganiser.github.io/terms/views/horizon2020
 
 * Import prüft ob das Element mit der `uri` bereits vorhanden ist.
     * Felder vorhandener Elemente werden überschrieben/aktualisiert.
-    * Nicht vorhandene Elemente werden neu erstellt. `path` muss aber "unique" bleiben.
-* Referenzen werden über die `uri` aufgelöst. Referenziertes Element muss schon vorhanden sein. (Reihenfolge: Domäne, Bedingungen, Optionen, Bedingungen, Rest).
+    * Nicht vorhandene Elemente werden neu erstellt.
+* Referenzen werden über die `uri` aufgelöst. Das referenzierte Element muss schon vorhanden sein. (Reihenfolge: Domäne, Bedingungen, Optionen, Bedingungen, Rest).
 
 ---
 
@@ -699,23 +565,22 @@ https://rdmorganiser.github.io/terms/views/horizon2020
 * Issues zu Content-Fragen: https://github.com/rdmorganiser/rdmo-catalog/issues
 * Content-Gruppe koordiniert den Austausch der Inhalte:
     * Slack-Channel: *#content*
-    * Webkonferenzen
-    * Sprecherin: Kerstin Wedlich-Zachodin
-* Workflow zur Kuration der Inhalte ist noch nicht etabliert.
+    * Webkonferenzen an jedem 2. Donnerstag im Monat (und bei Bedarf)
+    * Sprecherin: Kerstin Wedlich-Zachodin (KIT)
+* Workflow zur Kuration der Inhalte über Pull-Requests und Releases wird z.Z. etabliert.
+* Im Bereich `shared` wird Content gesammelt der in der Community erstellt wurde, aber nicht zentral gepflegt wird.
 
 ---
 
 ### Vorhandene Materialien
 
-* **RDMO Projekt**:
+* **RDMO:**
     * RDMO Domänenmodell (Startpunkt für alle!), Fragenkataloge (RDMO, RDMO-Kurz, DCC, SNF), Optionen, Bedingungen, Ansichten, Aufgaben
-* **fodako**
-    * Unterkataloge: "DFG", "Soziologie + DFG", "Ökonomie + DFG", "Bildungswissenschaften + DFG", "Alle Fragen"
-* **NFDI4ING**
-    * Fragenkatalog: "Mechanical Engineering" (kein README)
-* **UB FAU Erlangen Nürnberg**
-    * Eins-zu-Eins Horizon2020 Fragenkatalog
-    * Zusätzliche Fragen aus ["Förderkriterien für Wissenschaftliche Editionen in der Literaturwissenschaft" der DFG](https://www.dfg.de/download/pdf/foerderung/antragstellung/forschungsdaten/foerderkriterien_editionen_literaturwissenschaft.pdf).
+* **fodako:**: Kataloge aus dem DFG Kontext.
+* **HeFDI:** Einsteiger:innen-freundlicher Katalog für Servicestellen
+* **NFDI4ING:** Fragenkatalog: "Mechanical Engineering" (kein README)
+* **EmiMin:** Emissionsminderung in der Nutztierhaltung
+* **UB FAU Erlangen Nürnberg:** Eins-zu-Eins Horizon2020 Fragenkatalog, Zusätzliche Fragen aus ["Förderkriterien für Wissenschaftliche Editionen in der Literaturwissenschaft" der DFG](https://www.dfg.de/download/pdf/foerderung/antragstellung/forschungsdaten/foerderkriterien_editionen_literaturwissenschaft.pdf).
 
 ---
 
@@ -750,17 +615,16 @@ curl -X GET -H 'Authorization: Token oojoh3phaighaebiNeiyeeCeiY3Peuv2eitoojoh' \
 
 ## Plugins
 
-*(in der Entwicklung)*
-
-* Frei programmierbare Projekt-Exporte und -Importe
+* Frei programmierbare Projekt-Exporte und -Importe ([rdmo-plugins](https://github.com/rdmorganiser/rdmo-plugins))
     * [RDA DMP Common Standard for machine-actionable DMP](https://github.com/RDA-DMP-Common/RDA-DMP-Common-Standard) (maDMP)
     * [DataCite XML (Kernel 4.3)](https://schema.datacite.org/meta/kernel-4.3/) für Datensätze
     * [RADAR Metadata JSON](https://www.radar-service.eu/de/radar-schema) für Datensätze
     * Andere lokale Datenquellen (z.B. FIS, easy-Online XML)
-* Nutzung fremder APIs (z.B. [re3data.org](https://www.re3data.org/))
+* Nutzung fremder APIs (z.B. [re3data.org](https://www.re3data.org/), [rdmo-re3data](https://github.com/rdmorganiser/rdmo-re3data))
+* Verwendung großer Thessauri in RDMO (z.B. MeSH mit ~30k Einträgen, [rdmo-mesh](https://github.com/rdmorganiser/rdmo-mesh))
 * Aktionen in RDMO stoßen externe Vorgänge an:
-  * Aufgrabe erzeugen Tickets in Projektmanagementtools (Jira, Redmine, OTRS)
-  * Snapshots werden extern archiviert
+  * Aufgrabe erzeugen Tickets in Projektmanagementtools (GitLab, GitHub)
+  * Nutzung von Django Signals, z.B. externe Archivierung von Snapshots
 
 ---
 
@@ -785,7 +649,7 @@ class CustomExport(Export):
 
 * Verbindung zur RDMO Kernfunktionalität durch *Signals* und *Handler*.
 * Integration von zusätzlichen Bedienelementen durch *Templates*.
-* Bereitstellung auf GitHub: [rdmo-plugins](https://github.com/rdmorganiser/rdmo-plugins) (analog zu [rdmo-catalog](https://github.com/rdmorganiser/rdmo-catalog)).
+* Bereitstellung auf GitHub: [rdmo-plugins](https://github.com/rdmorganiser/rdmo-plugins), [rdmo-re3data](https://github.com/rdmorganiser/rdmo-re3data), [rdmo-mesh](https://github.com/rdmorganiser/rdmo-mesh).
 
 ---
 
@@ -820,9 +684,9 @@ Das Django-Framework bietet eine reichhaltige Administrations- (oder kurz Admin-
 
 Django `superuser` können prinzipiell alles, `staff` kann sich in das Admin interface einloggen.
 
-**Gruppen**: `editor` kann editieren, `reviewer` kann lesen, `api` kann über die API auf alle Inhalte zugreifen. *(ab RDMO 1.1)* Kataloge, Ansichten und Aufgaben können nur für bestimmte Gruppen freigegeben werden. Gruppen können aus LDAP oder Shibboleth übernommen werden.
+**Gruppen**: `editor` kann editieren, `reviewer` kann lesen, `api` kann über die API auf alle Inhalte zugreifen. Kataloge, Ansichten und Aufgaben können nur für bestimmte Gruppen freigegeben werden. Gruppen können aus LDAP oder Shibboleth übernommen werden.
 
-**Rollen**: *(ab RDMO 1.1)* User sind `member` einer Site (nur für Multi-Site relevant) und können `manager` sein.
+**Rollen**: User sind `member` einer Site (nur für Multi-Site relevant) und können `manager` sein.
 Site-Manager können alle Projekte (einer Site) lesen und schreiben.
 
 **Zusätzliche Felder** dienen der Erweiterung des RDMO internen User-Models (und müssen evtl. bei der Registrierung angegeben werden.).
@@ -865,6 +729,21 @@ rdmo-up
 ```
 
 Es bietet sich an, für lokale Anpassungen eine eigene Django-App zu implementieren, z.B. hier `rdmo_up`. Die App enthält das Theme, kann aber Logik enthalten. Durch Anpassungen an der `urls.py` können zusätzliche Webseiten hinzugefügt werden.
+
+---
+
+### Multi-Site Installation
+
+* RDMO bietet bei Bedarf eine eingeschränkte Mandantenfähigkeit.
+* Über das [Sites Framework](https://docs.djangoproject.com/en/2.2/ref/contrib/sites/) von Django können mehrere RDMO Apps auf der selben Datenbank betrieben werden.
+* Über ein geteiltes virtuelles Environment können die Instanzen auch gemeinsam upgedatet werden.
+* Die verschiedenen Sites haben unterschiedliche URLs und können unterschiedliche Themes haben (z.B. für verschiedene Hochschulen oder Institute).
+* Kataloge, Ansichten und Aufgaben können für einzelne Sites frei gegeben werden.
+* User aller Instanzen können sich in allen Instanzen einloggen und zu allen Projekten hinzugefügt werden (Ausname: Shibboleth).
+
+.ref[
+    Dokumentation: https://rdmo.readthedocs.io/en/latest/configuration/multisite.html
+]
 
 ---
 
@@ -926,6 +805,33 @@ Jedes HTML-Template und jede CSS Datei kann überschrieben werden. Für CSS kann
 
 ---
 
+Nutzungsbedingungen
+-------------------
+
+.center.w75.shadow[
+    ![](img/screen/terms_of_use.png)
+]
+
+* Über `ACCOUNT_TERMS_OF_USE = True` in `config/settings/local.py` kann eine Seite zu Nutzungsbedingungen beim Registrieren eingeblendet werden.
+* Die Seite wird über das Template `account/terms_of_use_de.html` angepasst.
+* Das Zustimmen wird in der Datenbank explizit gespeichert.
+
+---
+
+Overlays
+--------
+
+.center.w75.shadow[
+    ![](img/screen/overlays.png)
+]
+
+* Beim ersten Benutzen der Seite wird ein Tutorial in Form von Overlays angezeigt.
+* Die einzelnen Texte können wir alle Templates angepasst werden, z.B. in:
+    * `projects/templates/projects/overlays/projects_create_project_de.html`
+* Theoretisch können auch neue Seiten mit Overlays versehen werden.
+
+---
+
 ### Authentifizierung
 
 * Benutzerkonten mit Registrierung unter Verwendung der `django-allauth`-Bibliothek.
@@ -937,7 +843,7 @@ Jedes HTML-Template und jede CSS Datei kann überschrieben werden. Für CSS kann
     * Gruppen können übernommen werden.
     * Großer Spaß für alle Beteiligten!
 
-`django-allauth` und LDAP können kombiniert werden, Shibboleth nicht (läuft über Apache).
+`django-allauth` und LDAP können kombiniert werden, Shibboleth nicht (läuft über Apache). Terms of use funktionieren auch nicht mit Shibboleth.
 
 ---
 
