@@ -10,7 +10,7 @@ class: title, center, middle
 
 ---
 
-Die Bereitstellung dieser Folien wurde ermöglicht von der [Universität Potsdam](https://www.uni-potsdam.de/) und dem [Zuse-Institut Berlin (ZIB)](https://www.zib.de). Sie können frei nachgenutzt werden.
+Die Bereitstellung dieser Folien wurde von der [Universität Potsdam](https://www.uni-potsdam.de/), dem [Zuse-Institut Berlin (ZIB)](https://www.zib.de) und der [ZB MED](https://www.zbmed.de/) ermöglicht. Sie können frei nachgenutzt werden.
 
 Es gilt die [CC0 1.0 Universell (CC0 1.0) Public Domain Dedication](https://creativecommons.org/publicdomain/zero/1.0/deed.de).
 
@@ -48,183 +48,246 @@ class: title, center, middle
     ![](img/fig/question.svg)
 ]
 
-* Das **strukturierte Interview** wird mithilfe von Katalogen, Abschnitten, Fragensets und Fragen konfiguriert. Eine *Instanz* von RDMO kann mehrere Kataloge haben. Für ein Projekt muss einer dieser Kataloge ausgewählt werden (kann aber gewechselt werden).
-* Die Eingaben werden als *Wert* mit der Referenz auf ein *Projekt* und ein *Attribut* gespeichert. Damit bleibt bei einem Wechsel des Katalogs der Wert erhalten.
+* Das **strukturierte Interview** wird mithilfe von Katalogen, Abschnitten, Fragensets und Fragen konfiguriert. Eine **Instanz** von RDMO kann mehrere Kataloge haben. Für ein Projekt muss einer dieser Kataloge ausgewählt werden (kann aber gewechselt werden).
+* Die Eingaben werden als **Wert** mit der Referenz auf ein **Projekt** und ein **Attribut** gespeichert. Damit bleibt bei einem Wechsel des Katalogs der Wert erhalten.
 
 ---
 
-#### Fragen-Management
+### Fragenkataloge
 
-.center.w75.shadow[
-    ![](img/screen/questions.png)
+.screen-img[
+    ![](img/screens/questions-management.png)
+]
+
+.screen-text[
+* Fragenkataloge werden über ein eigenes Interface editiert
+* Admins und die Gruppen *Editor* und *Reviewer* haben Zugriff
+* Kataloge, Abschnitte, Fragensets und Fragen können erstellt, editiert, kopiert, exportiert und importiert werden
+* Alle Elemente verfügen über eine *URI* um sie global identifizierbar zu machen
 ]
 
 ---
 
-##### Einfache Fragen
+### Fragenkataloge
 
-.center.w75.shadow[
-    ![](img/screen/question1-screen.png)
+* Kataloge sind nur zugänglich für die User, wenn das **Verfügbar**-Flag gesetzt ist.
+* Kataloge können auf spezielle Gruppen und Sites (im Multi-Site-Setup) eingeschränkt werden.
+* Kataloge können bei laufenden Projekten durch die User umgeschaltet werden. Werte zu Attributen, die dann keine Frage mehr haben, bleiben erhalten.
+* Abschnitte, Fragensets und Fragen können auch in andere Fragenkataloge kopiert werden. So können Fragenkataloge zusammengebaut werden.
+
+---
+
+### Fragen
+
+.screen-img[
+    ![](img/screens/questions.png)
+]
+
+.screen-text[
+* Fragen werden immer einem Fragenset zugeordnet
+* Es stehen verschiedene Widget-Typen zur Verfügung (Text, Textfeld, Select-Dropdown, ...)
+* Wenn Fragen als *Sammlung* markiert werden, können mehrere Antworten eingegeben werden
 ]
 
 ---
 
-##### Einfache Fragen
+### Fragen
 
-.center.w75.shadow[
-    ![](img/screen/question1-modal1.png)
+.screen-img[
+    ![](img/screens/questions-edit.png)
+]
+
+.screen-text[
+* Alle Elemente in RDMO haben einen URI Prefix, einen Schlüssel und können einen Kommentar haben
+* Elemente können gesperrt werden, um nicht aus Versehen geändert zu werden
+* Fragen müssen einem Attribut zugeordnet sein und ein Widget-Type und einen Wert-Typ haben
+* Andere Angaben sind optional
 ]
 
 ---
 
-##### Einfache Fragen
+### Fragen
 
-.center.w75.shadow[
-    ![](img/screen/question1-modal2.png)
+.screen-img[
+    ![](img/screens/questions-languages.png)
+]
+
+.screen-text[
+* Frage und Hilfetext werden per Sprache editiert
+* Anzeigenamen werden für Buttons verwendet (z.B. "Schlagwort hinzufügen")
+* Im Hilfetext kann Markdown verwendet werden, z.B. `[Text](Link)` für Links, Tooltips können mit der speziellen Syntax `[Text]{Tooltip}` erstellt werden
 ]
 
 ---
 
-#### Fragen mit mehreren Antworten
+### Fragen
 
-.center.w75.shadow[
-    ![](img/screen/question1-screen.png)
-]
+**Standardwerte**
 
----
+* Für Fragen können Standardwerte als Text oder als Option vorgegeben werden.
+* Der Standardwert wird für die Nutzenden initial angezeigt, und beim erstmaligen Speichern übernommen.
 
-##### Fragen mit mehreren Antworten
+**Optionale Fragen**
 
-.center.w75.shadow[
-    ![](img/screen/question2-modal1.png)
-]
+* Fragen können als optional markiert werden und werden dann entsprechend für die Nutzenden markiert.
 
----
+**Datei-Upload**
 
-##### Fragen mit mehreren Antworten
-
-.center.w75.shadow[
-    ![](img/screen/question2-modal2.png)
-]
+* Es können Datei-Uploads konfiguriert werden, um zusätzliches Material wie Grafiken oder Dokumente hochzuladen. Files werden auf dem Server gespeichert und können via Aufgabe versendet werden.
 
 ---
 
-#### Widget-Typ
+**Mögliche Widget-Typen**
 
+.smaller[
 * Text
-* Textarea
-* Yes/No
-* Checkboxes
-* Radio buttons
-* Select drop-down
-* Range slider
-* Date picker
-* File upload
+* Textfelt
+* Ja/Nein
+* Ankreuzfelder
+* Radio Buttons
+* Select-Dropdown-Menu
 * Autocomplete
+* Schieberegler
+* Datumspicker
+* Datei-Upload
+
+]
 
 .aside[
 
-#### Wert-Typ
+**Mögliche Wert-Typen**
 
+.smaller[
 * Text
 * URL
-* Integer
-* Float
-* Boolean
-* Datetime
+* Ganzzahl
+* Kommazahl
+* Boolsche Variable
+* Datum und Uhrzeit
+* E-Mail
+* Telefon
 * Option
+* Datei
+]
 
+Wert-Typen sind noch nicht vollständig implementiert. In der Zukunft sollen sie aber zur Validierung eingesetzt werden.
 ]
 
 ---
 
-#### Fragensets
+## Fragensets
 
-.center.w75.shadow[
-    ![](img/screen/question1-screen.png)
+.screen-img[
+    ![](img/screens/questionsets-edit.png)
+]
+
+.screen-text[
+* Fragensets sind immer einem Abschnitt zugeordnet
+* Fragensets können eigene Hilfetexte haben
+* Fragensets können als **Sammlung** markiert sein, dann sollte ein Attribut zugeordnet sein
+* Fragensets können **geschachtelt** werden, um Hierarchien abzubilden (z.B. für DataCite)
 ]
 
 ---
 
-#### Fragensets
-
-.center.w75.shadow[
-    ![](img/screen/questionset1-modal.png)
-]
-
----
-
-#### Fragensets mit Tabs
-
-.center.w75.shadow[
-    ![](img/screen/questionset2-screen.png)
-]
-
----
-
-##### Fragensets mit Tabs
+### Fragensets (Sammlung)
 
 .center.w66[
     ![](img/fig/questionset.svg)
 ]
 
-* Fragensets mit Tabs haben ein Fragenset-Attribut zugeordnet (z.B. `project/dataset`).
-* Es *sollte* ein `id` Attribut für das Fragenset-Attribut existieren (z.B. `project/dataset/id`).
-* Für jedes Set wird ein Wert für das `id`-Attribut angelegt.
-* Intern haben Werte haben ein `collection_index` Feld für Fragen mit mehreren Antworten und ein `set_index` Feld für Fragensets mit Tabs.
-
+* In Fragensets die als Sammlung markiert sind werden die gleichen Fragen für verschiedene **Sets** (z.B. für verschiedene Datensätze) beantwortet.
+* Es *sollte* ein Attribut für das Fragenset-Attribut zugeordnet sein (z.B. `project/dataset/id`).
+* Für jedes Set wird ein Wert für das Fragenset-Attribut angelegt.
 ---
 
-##### Fragensets mit Tabs
+### Fragensets (Sammlung)
 
-.center.w75.shadow[
-    ![](img/screen/questionset2-modal1.png)
+.screen-img[
+    ![](img/screens/questionsets-collection.png)
+]
+
+.screen-text[
+* Sets werden mit Hilfe von Tabs dargestellt
+* Sets können durch die Nutzenden angelegt, umbenannt und gelöscht werden
 ]
 
 ---
 
-##### Fragensets mit Tabs
+### Fragensets (geschachtelt)
 
-.center.w75.shadow[
-    ![](img/screen/questionset2-modal2.png)
+.center.w66[
+    ![](img/fig/questionset2.svg)
+]
+
+* Fragensets können auch Fragensets zugeordnet sein, um Hierarchien abzubilden.
+  * z.B. bei DataCite: Datensatz - Creator - Affiliation
+* Fragensets in Fragensets können, müssen aber keine Sammlungen sein.
+
+---
+
+### Fragensets (geschachtelt)
+
+.screen-img[
+    ![](img/screens/questionsets-nested.png)
+]
+
+.screen-text[
+* Geschachtelte Fragensets werden vertikal untereinander dargestellt
+* Geschachtelte Fragensets die als Sammlung markiert sind verfügen über eigene Buttons zum Erstellen und Löschen von Sets.
 ]
 
 ---
 
 ### Domänenmodell und Attribute
 
-* Internes Vokabular aus einem Baum aus `keys`, ähnlich einer Verzeichnisstruktur:
+* RDMO nutzt ein internes Vokabular aus einem Baum aus `keys`, ähnlich einer Verzeichnisstruktur:
   * `project`
   * `project/dataset`
   * `project/dataset/format`
-* Verbindet Fragen, Antworten (Werte), Ansichten, Aufgaben, API etc.
+* Die Attribute verbinden Fragen, Antworten (Werte), Ansichten, Aufgaben, API etc.
 * Für neue Fragen müssen in der Regel zunächst neue Attribute geschaffen werden.
 * Derzeitige Attribute sind [Kerndatensatz Forschung](https://www.kerndatensatz-forschung.de/), [CERIF](https://www.eurocris.org/cerif/main-features-cerif), [CASRAI](https://dictionary.casrai.org/Category:Terms), [FOAF](http://xmlns.com/foaf/spec/) motiviert.
-* Herrausforderungen: Weiterentwicklung, logische Konsistenz, Migrationen, Konformität mit [maDMP](https://www.rd-alliance.org/rda-working-groups-solutions-dmp-recording-and-slides-webinar-now-available-0)/[DataCite](https://schema.datacite.org/meta/kernel-4.1/)/[RADAR](https://www.radar-service.eu), Organisation des Community-Prozesses.
+* Herausforderungen: Weiterentwicklung, logische Konsistenz, Migrationen, Konformität mit [maDMP](https://www.rd-alliance.org/rda-working-groups-solutions-dmp-recording-and-slides-webinar-now-available-0)/[DataCite](https://schema.datacite.org/meta/kernel-4.1/)/[RADAR](https://www.radar-service.eu), Organisation des Community-Prozesses.
 * **Domänenmodell sollte zwischen RDMO Instanzen kompatibel bleiben!**
 
 ---
 
-#### Attribute
+### Attribute
 
-.center.w75.shadow[
-    ![](img/screen/domain.png)
+.screen-img[
+    ![](img/screens/domain-management.png)
+]
+
+.screen-text[
+* Attribute werden im Domäne-Management verwaltet
+* Wie zuvor haben Admins und die Gruppen *Editor* und *Reviewer* Zugriff
+* Attribute können erstellt, editiert, kopiert, exportiert und importiert werden
 ]
 
 ---
 
-#### Attribute
+### Attribute
 
-.center.w75.shadow[
-    ![](img/screen/domain-modal.png)
+.screen-img[
+    ![](img/screens/attributes-edit.png)
 ]
 
+.screen-text[
+* Im Prinzip haben außer ihrem Schlüssen keine weiteren Eigenschaften
+* Durch Setzen eines Übergeordneten Attributs ergibt sich der Domänen-Baum
+]
 ---
 
-### Fragen mit Optionen
+### Optionen
 
-.center.w75.shadow[
-    ![](img/screen/question-option-screen.png)
+.screen-img[
+    ![](img/screens/options.png)
+]
+
+.screen-text[
+* Optionen dienen dazu, feste Antwortmöglichkeiten für Fragen bereitzustellen
+* Sie werden mit Radio Buttons, Ankreuzboxen, Select-Drowdown-Menus oder dem Autocomplete Widget genutzt
 ]
 
 ---
@@ -235,54 +298,49 @@ class: title, center, middle
     ![](img/fig/options.svg)
 ]
 
-* Fragen bekommen Optionensets zugeordnet.
-* Werte speichern Referenzen auf Optionen.
+* Einzelne Optionen in Optionensets organisiert, die wiederum Fragen im Fragenkatalog zugeordnet werden. Werte speichern Referenzen auf Optionen.
 
 ---
 
 ### Optionen
 
-.center.w75.shadow[
-    ![](img/screen/question-option-modal.png)
+.screen-img[
+    ![](img/screens/options-management.png)
 ]
+
+.screen-text[
+* Optionensets und Optionen werden im Optionen-Management verwaltet
+* Wie zuvor haben Admins und die Gruppen *Editor* und *Reviewer* Zugriff
+* Optionensets und Optionen können erstellt, editiert, kopiert, exportiert und importiert werden
+]
+
 
 ---
 
 ### Optionensets
 
-.center.w75.shadow[
-    ![](img/screen/optionsets-screen.png)
+.screen-img[
+    ![](img/screens/optionsets-edit.png)
 ]
 
----
-
-### Optionensets
-
-.center.w75.shadow[
-    ![](img/screen/optionset-modal.png)
+.screen-text[
+* Für Optionensets kann ein Wert für die Reihenfolge angegeben werden, der aber nur für den Fall relevant ist, wenn einer Frage mehrere Optionensets zugeordnet werden.
+* Falls **Optionset-Provider** (Plugins für Optionensets) konfiguriert sind können sie dem Optionenset zugeordnet werden
 ]
 
 ---
 
 ### Optionen
 
-.center.w75.shadow[
-    ![](img/screen/option-modal.png)
+.screen-img[
+    ![](img/screens/options-edit.png)
 ]
 
----
-
-### Bemerkungen
-
-* Alle Elemente können auch kopiert werden.
-* Elemente können mit dem *Gesperrt*-Flag vor versehentlichem Editieren geschützt werden.
-* Kataloge sind nur zugänglich für die User, wenn das *Verfügbar*-Flag gesetzt ist.
-* Kataloge können auf spezielle Gruppen und Sites (im Multi-Site-Setup) eingeschränkt werden.
-* Kataloge können bei laufenden Projekten durch die User umgeschaltet werden. Werte zu Attributen, die dann keine Frage mehr haben, bleiben erhalten.
-* Hilfetexte von Fragen und Fragensets können Markdown-Syntax verwenden.
-* Für Fragen können voreingestellte Antworten konfiguriert werden.
-* Fragen können als optional markiert werden.
-* Eingaben zu Fragen werden (noch) nicht inhaltlich validiert.
+.screen-text[
+* Optionen werden immer einem Optionenset zugeordnet
+* Wenn **Zusätzliche Eingabe** markiert ist, kann zusätzlicher Freitext eingegeben werden
+* Der dargestellte Text wird per Sprache eingegeben
+]
 
 ---
 
@@ -328,75 +386,94 @@ class: title, center, middle
 
 ### Bedingungen
 
-.center.w75.shadow[
-    ![](img/screen/conditions.png)
+.screen-img[
+    ![](img/screens/conditions-management.png)
 ]
+
+.screen-text[
+* Bedingungen werden in einem separaten Management verwaltet
+* Wie zuvor haben Admins und die Gruppen *Editor* und *Reviewer* Zugriff
+* Bedingungen können erstellt, editiert, kopiert, exportiert und importiert werden
+]
+
 
 ---
 
 ### Bedingungen
 
-.center.w75.shadow[
-    ![](img/screen/condition-modal.png)
+.screen-img[
+    ![](img/screens/conditions-edit.png)
 ]
+
+.screen-text[
+* Bedingungen haben eine **Quelle** (das Attribut das ausgewertet wird), eine **Verknüpfung**, und ein **Ziel**, das entweder ein Freitext oder eine bestimmte Option sein kann.
+* Die Bedingung trifft dann zu, wenn im Projekt eine Wert eingegeben wurde, bei dem die Verknüpfung mit dem Ziel wahr ist.
+]
+
 
 ---
 
-### Bedingungen für Fragensets
+### Bedingungen
 
-.center.w75.shadow[
-    ![](img/screen/questionset-condition-modal.png)
+* Bedingungen können Fragensets oder Fragen zugeordnet werden
+* Fragensets bei denen die Bedingungen nicht zutreffen werden im Interview übersprungen
+* Fragen bei denen die Bedingungen nicht zutreffen werden ausgeblendet
+
+---
+
+### Ansichten
+
+.screen-img[
+    ![](img/screens/views.png)
+]
+
+.screen-text[
+* Ansichten werden genutzt um die Eingaben der Nutzenden in einer anderen Form wieder auszugeben.
+* In der Regel wird dies für Datenmanagementplan-Vorlagen von Förderorganisationen genutzt
 ]
 
 ---
 
 ### Ansichten
 
-.center.w75.shadow[
-    ![](img/screen/views-screen.png)
+.screen-img[
+    ![](img/screens/views-management.png)
+]
+
+.screen-text[
+* Ansichten werden in einem separaten Management verwaltet
+* Wie zuvor haben Admins und die Gruppen *Editor* und *Reviewer* Zugriff
+* Ansichten können erstellt, editiert, kopiert, exportiert und importiert werden
+* Ansichten können wie Kataloge über das **Verfügbar**-Flag, sowie Gruppen und Sites eingeschränkt werden
 ]
 
 ---
 
 ### Ansichten
 
-.center.w75.shadow[
-    ![](img/screen/view-screen.png)
+.screen-img[
+    ![](img/screens/views-template.png)
+]
+
+.screen-text[
+* Für das Editieren der Templates gibt es ein eigenes Modal
+* Die Templates der Ansichten werden mit Hilfe der Django Template Syntax in HTML geschrieben
+* RDMO spezifische `view_tags` dienen dazu, die Werte des Projektes über ihr Attribut anzusprechen
+* Die gerenderten HTML Ansichten können über Pandoc in verschiedene Formate exportiert werden
 ]
 
 ---
 
 ### Ansichten
 
-.center.w75.shadow[
-    ![](img/screen/view-modal.png)
-]
-
----
-
-### Ansichten
-
-* Ansichten werden in der Django Template Syntax geschrieben.
-* Zusätzlich dienen RDMO spezifische `view_tags` dazu die Werte des Projektes anzusprechen.
-    * <https://rdmo.readthedocs.io/en/latest/management/views.html>
-* Über [django-mathfilters](https://pypi.org/project/django-mathfilters/) kann auch mit Werten gerechnet werden.
-* Ansichten können über [Pandoc](https://pandoc.org/) exportiert werden.
-* Für spezielle Layouts können Musterdokumente für `.docx` und `.odt` angelegt werden.
-    * <https://rdmo.readthedocs.io/en/latest/configuration/export-formats.html>
-* Plugins für frei programmierbare Ansichten sind in Planung.
-
----
-
-#### Template-Code
+Beispiele für RDMO Template-Code:
 
 ```django
 The main research question of the project is: {% render_value 'project/research_question/title' %}
 ```
 
 ```django
-<p>
-    {% render_value_inline_list 'project/research_question/keywords' %}
-</p>
+<p>{% render_value_inline_list 'project/research_question/keywords' %}</p>
 ```
 
 ```django
@@ -419,12 +496,34 @@ Mehr Beispiele: https://rdmo.readthedocs.io/en/latest/management/views.html.
 
 ---
 
+### Ansichten
+
+* Über [django-mathfilters](https://pypi.org/project/django-mathfilters/) kann auch mit Werten gerechnet werden.
+* Ansichten können über [Pandoc](https://pandoc.org/) exportiert werden.
+* Für spezielle Layouts können Musterdokumente für `.docx` und `.odt` angelegt werden.
+    * <https://rdmo.readthedocs.io/en/latest/configuration/export-formats.html>
+* Plugins für frei programmierbare Ansichten sind in Planung.
+
+---
+
 ### Aufgaben
 
-* Aufgaben haben einen Titel und einen Text und werden mit Bedingungen verknüpft.
-* Wenn eine der Bedingungen zutrifft, wird die Aufgabe in User-Interface angezeigt.
-* Der Status eienr Aufgabe im Projekt kann durch die User verändert werden.
+.screen-img[
+    ![](img/screens/tasks.png)
+]
+
+.screen-text[
+* Aufgaben haben einen Titel und einen Text und werden mit Bedingungen verknüpft
+* Wenn eine der Bedingungen zutrifft, wird die Aufgabe in User-Interface angezeigt
+]
+
+---
+
+### Aufgaben
+
+* Der Status einer Aufgabe im Projekt kann durch die User verändert werden.
 * Über einen Zeitrahmen können, basierend auf vorhergehenden Werten zu bestimmten Attributen, Anfangs- und Enddaten für eine Aufgabe konfiguriert werden.
+
 * Aufgaben können verschickt werden:
     * an fest konfigurierte und/oder frei wählbare Emailaddressen, oder
     * über eine Integration in ein Projekt-Management-Tool.
@@ -440,45 +539,16 @@ Mehr Beispiele: https://rdmo.readthedocs.io/en/latest/management/views.html.
 
 ### Aufgaben
 
-[Aufgaben unter Projekt]
-
----
-
-### Aufgaben
-
-.center.w75.shadow[
-    ![](img/screen/tasks.png)
+.screen-img[
+    ![](img/screens/tasks-management.png)
 ]
 
----
-
-### Aufgaben
-
-.center.w75.shadow[
-    ![](img/screen/task-modal.png)
+.screen-text[
+* Aufgaben werden in einem separaten Management verwaltet
+* Wie zuvor haben Admins und die Gruppen *Editor* und *Reviewer* Zugriff
+* Aufgaben können erstellt, editiert, kopiert, exportiert und importiert werden
+* Aufgaben können wie Kataloge über das **Verfügbar**-Flag, sowie Gruppen und Sites eingeschränkt werden
 ]
-
----
-
-### Aufgaben
-
-.center.w75.shadow[
-    ![](img/screen/task-condition.png)
-]
-
----
-
-### Aufgaben
-
-.center.w75.shadow[
-    ![](img/screen/task-timeframe.png)
-]
-
----
-
-### Aufgaben
-
-[Aufgabe senden]
 
 ---
 
@@ -548,7 +618,7 @@ https://rdmorganiser.github.io/terms/views/horizon2020
 * Import über XML-Upload auf den Management Seiten oder über die Command-Line auf dem Server.
 
 .center.w75.shadow[
-    ![](img/screen/import-screen.png)
+    ![](img/screens/import.png)
 ]
 
 * Import prüft ob das Element mit der `uri` bereits vorhanden ist.
@@ -617,13 +687,13 @@ curl -X GET -H 'Authorization: Token oojoh3phaighaebiNeiyeeCeiY3Peuv2eitoojoh' \
 
 * Frei programmierbare Projekt-Exporte und -Importe ([rdmo-plugins](https://github.com/rdmorganiser/rdmo-plugins))
     * [RDA DMP Common Standard for machine-actionable DMP](https://github.com/RDA-DMP-Common/RDA-DMP-Common-Standard) (maDMP)
-    * [DataCite XML (Kernel 4.3)](https://schema.datacite.org/meta/kernel-4.3/) für Datensätze
+    * [DataCite XML (Kernel 4.4)](https://schema.datacite.org/meta/kernel-4.4/) für Datensätze
     * [RADAR Metadata JSON](https://www.radar-service.eu/de/radar-schema) für Datensätze
     * Andere lokale Datenquellen (z.B. FIS, easy-Online XML)
 * Nutzung fremder APIs (z.B. [re3data.org](https://www.re3data.org/), [rdmo-re3data](https://github.com/rdmorganiser/rdmo-re3data))
 * Verwendung großer Thessauri in RDMO (z.B. MeSH mit ~30k Einträgen, [rdmo-mesh](https://github.com/rdmorganiser/rdmo-mesh))
 * Aktionen in RDMO stoßen externe Vorgänge an:
-  * Aufgrabe erzeugen Tickets in Projektmanagementtools (GitLab, GitHub)
+  * Aufgaben erzeugen Tickets in Projektmanagementtools (GitLab, GitHub)
   * Nutzung von Django Signals, z.B. externe Archivierung von Snapshots
 
 ---
@@ -672,17 +742,20 @@ class: title, center, middle
 
 ### Django-Admin
 
-Das Django-Framework bietet eine reichhaltige Administrations- (oder kurz Admin-) Schnittstelle, die es erlaubt, die meisten Einträge in der Datenbank direkt zu manipulieren.
+.screen-img[
+    ![](img/screens/admin.png)
+]
 
-.center.w75.shadow[
-    ![](img/screen/admin.png)
+.screen-text[
+* Das Django-Framework bietet eine reichhaltige Administrations- (oder kurz Admin-) Schnittstelle, die es erlaubt, die meisten Einträge in der Datenbank direkt zu manipulieren.
+* Da RDMO ein eigenes Management Interface mitbringt ist eigentlich nur die Nutzendenverwaltung relevant.
 ]
 
 ---
 
 ### Django-Admin
 
-Django `superuser` können prinzipiell alles, `staff` kann sich in das Admin interface einloggen.
+Django `superuser` können prinzipiell alles, `staff` kann sich in das Admin Interface einloggen.
 
 **Gruppen**: `editor` kann editieren, `reviewer` kann lesen, `api` kann über die API auf alle Inhalte zugreifen. Kataloge, Ansichten und Aufgaben können nur für bestimmte Gruppen freigegeben werden. Gruppen können aus LDAP oder Shibboleth übernommen werden.
 
@@ -693,14 +766,14 @@ Site-Manager können alle Projekte (einer Site) lesen und schreiben.
 
 Für die Nutzung der API können **Tokens** im Admin-Interface erstellt werden.
 
-**Content** und *Nutzerdaten* können auch über das Admin-Interface editiert werden.
+**Content** und **Nutzerdaten** können auch über das Admin-Interface editiert werden.
 
 ---
 
 ##### Sites (Websites)
 
 .center.w75.shadow[
-    ![](img/screen/sites.png)
+    ![](img/screens/sites.png)
 ]
 
 Normalerweise gibt **ein** Eintrag den Namen (rechts oben in der Navigation) und die URL der RDMO Instanz an. Im Multi-Site-Betrieb können mehrere RDMO Sites auf einem Server und mit einer Datenbank betrieben werden. Kataloge, Ansichten und Aufgaben können dann für bestimmte Sites freigegeben werden. Die Sites verfügen über getrennte `rdmo-app` Verzeichnisse und können verschiedene Themes haben.
@@ -720,7 +793,7 @@ rdmo-up
 │   └── wsgi.py
 ├── env
 ├── manage.py
-├── rdmo_up
+├── rdmo_theme
 │   ├── static
 │   └── templates
 ├── requirements
@@ -728,7 +801,7 @@ rdmo-up
 └── vendor
 ```
 
-Es bietet sich an, für lokale Anpassungen eine eigene Django-App zu implementieren, z.B. hier `rdmo_up`. Die App enthält das Theme, kann aber Logik enthalten. Durch Anpassungen an der `urls.py` können zusätzliche Webseiten hinzugefügt werden.
+Es bietet sich an, für lokale Anpassungen eine eigene Django-App zu implementieren, z.B. hier `rdmo_theme`. Die App enthält das Theme, kann aber Logik enthalten. Durch Anpassungen an der `urls.py` können zusätzliche Webseiten hinzugefügt werden.
 
 ---
 
@@ -769,10 +842,10 @@ Es bietet sich an, für lokale Anpassungen eine eigene Django-App zu implementie
 * Jedes HTML-Template und jede CSS Datei kann überschrieben werden
 
 .screen-theme.screen-theme1[
-    ![Theme1](img/screen/theme1.png)
+    ![Theme1](img/screens/theme1.png)
 ]
 .screen-theme.screen-theme2[
-    ![Theme2](img/screen/theme2.png)
+    ![Theme2](img/screens/theme2.png)
 ]
 
 ---
@@ -809,7 +882,7 @@ Nutzungsbedingungen
 -------------------
 
 .center.w75.shadow[
-    ![](img/screen/terms_of_use.png)
+    ![](img/screens/terms-of-use.png)
 ]
 
 * Über `ACCOUNT_TERMS_OF_USE = True` in `config/settings/local.py` kann eine Seite zu Nutzungsbedingungen beim Registrieren eingeblendet werden.
@@ -822,7 +895,7 @@ Overlays
 --------
 
 .center.w75.shadow[
-    ![](img/screen/overlays.png)
+    ![](img/screens/overlays.png)
 ]
 
 * Beim ersten Benutzen der Seite wird ein Tutorial in Form von Overlays angezeigt.
@@ -871,6 +944,7 @@ python manage.py set_uri_prefix         # Setzt uri_prefix für allen Content
 python manage.py setup_groups           # Erstellt editor, reviewer und api Gruppen
 python manage.py migrate                # Wendet Datenbankmigrationen an
 python manage.py collectstatic          # Kopiert statische Files nach static_root
+python manage.py upgrade                # Kombiniert download_vendor_files, migrate, collectstatic
 ```
 
 ---
@@ -893,7 +967,9 @@ Eventuell (siehe Release-Notes) müssen vorher noch Datenbankmigrationen durchge
 
 ```bash
 (env) user$ ./manage.py migrate
+(env) user$ ./manage.py download_vendor_files
 (env) user$ ./manage.py collectstatic
+(env) user$ ./manage.py upgrade  # alternativ
 ```
 
 ---

@@ -23,6 +23,9 @@ strong,
 em {
     color: #101F70;
 }
+img {
+    /*image-rendering: -webkit-optimize-contrast;*/
+}
 .abs {
     position: absolute;
 }
@@ -44,18 +47,6 @@ em {
 .w50 img {
     display: inline-block;
     width: 50%;
-}
-.screen {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 75%;
-}
-.screen img {
-    transform: translate(-50%, -50%);
-    display: block;
-    width: 100%;
-    margin-top: -25px;
 }
 .shadow img {
     box-shadow: 0 0 5px silver;
@@ -97,6 +88,9 @@ em {
 .remark-slide-content h5 {
     font-size: 2.2rem;
     margin: 2rem 0;
+}
+.remark-slide-content ul {
+    margin-top: 20px;
 }
 .remark-slide-content ul > li {
     margin-bottom: 1rem;
@@ -145,12 +139,32 @@ em {
     color: white;
 }
 
+.screen-img {
+    width: 720px;
+}
+.screen-img img {
+    display: block;
+    float: left;
+    width: 100%;
+    box-shadow: 0 0 5px silver;
+}
+.screen-text {
+    margin-left: 740px;
+    font-size: smaller;
+}
+
 .aside {
     position: absolute;
     top: 20px;
     left: 50%;
+    right: 80px;
 }
-
+.smaller {
+    font-size: smaller;
+}
+.smaller ul > li {
+    margin-bottom: 5px;
+}
 .rdmo-logo img {
     width: 160px;
     margin-bottom: 40px;
