@@ -60,10 +60,10 @@ class: title, center, middle
 ]
 
 .screen-text[
-* Fragenkataloge werden über ein eigenes Interface editiert
-* Admins und die Gruppen *Editor* und *Reviewer* haben Zugriff
-* Kataloge, Abschnitte, Fragensets und Fragen können erstellt, editiert, kopiert, exportiert und importiert werden
-* Alle Elemente verfügen über eine *URI* um sie global identifizierbar zu machen
+* Fragenkataloge werden über ein eigenes Interface editiert.
+* Admins und die Gruppen **Editor** und **Reviewer** haben Zugriff.
+* Kataloge, Abschnitte, Fragensets und Fragen können erstellt, editiert, kopiert, exportiert und importiert werden.
+* Alle Elemente verfügen über eine **URI** um sie global identifizierbar zu machen.
 ]
 
 ---
@@ -71,7 +71,7 @@ class: title, center, middle
 ### Fragenkataloge
 
 * Kataloge sind nur zugänglich für die User, wenn das **Verfügbar**-Flag gesetzt ist.
-* Kataloge können auf spezielle Gruppen und Sites (im Multi-Site-Setup) eingeschränkt werden.
+* Kataloge können auf spezielle **Gruppen** und **Sites** (im Multi-Site-Setup) eingeschränkt werden.
 * Kataloge können bei laufenden Projekten durch die User umgeschaltet werden. Werte zu Attributen, die dann keine Frage mehr haben, bleiben erhalten.
 * Abschnitte, Fragensets und Fragen können auch in andere Fragenkataloge kopiert werden. So können Fragenkataloge zusammengebaut werden.
 
@@ -84,9 +84,9 @@ class: title, center, middle
 ]
 
 .screen-text[
-* Fragen werden immer einem Fragenset zugeordnet
-* Es stehen verschiedene Widget-Typen zur Verfügung (Text, Textfeld, Select-Dropdown, ...)
-* Wenn Fragen als *Sammlung* markiert werden, können mehrere Antworten eingegeben werden
+* Fragen werden immer einem Fragenset zugeordnet.
+* Es stehen verschiedene Widget-Typen zur Verfügung (Text, Textfeld, Select-Dropdown, ...).
+* Wenn Fragen als **Sammlung** markiert werden, können mehrere Antworten eingegeben werden.
 ]
 
 ---
@@ -98,10 +98,10 @@ class: title, center, middle
 ]
 
 .screen-text[
-* Alle Elemente in RDMO haben einen URI Prefix, einen Schlüssel und können einen Kommentar haben
-* Elemente können gesperrt werden, um nicht aus Versehen geändert zu werden
-* Fragen müssen einem Attribut zugeordnet sein und ein Widget-Type und einen Wert-Typ haben
-* Andere Angaben sind optional
+* Alle Elemente in RDMO haben einen **URI Prefix**, einen Schlüssel und können einen Kommentar haben.
+* Elemente können **gesperrt** werden, um nicht aus Versehen geändert zu werden.
+* Fragen müssen einem Attribut zugeordnet sein und ein **Widget-Typ** und einen **Wert-Typ** haben.
+* Andere Angaben sind optional.
 ]
 
 ---
@@ -113,27 +113,18 @@ class: title, center, middle
 ]
 
 .screen-text[
-* Frage und Hilfetext werden per Sprache editiert
-* Anzeigenamen werden für Buttons verwendet (z.B. "Schlagwort hinzufügen")
-* Im Hilfetext kann Markdown verwendet werden, z.B. `[Text](Link)` für Links, Tooltips können mit der speziellen Syntax `[Text]{Tooltip}` erstellt werden
+* Frage und Hilfetext werden per Sprache editiert.
+* Anzeigenamen werden für Buttons verwendet (z.B. "Schlagwort hinzufügen").
+* Im Hilfetext kann Markdown verwendet werden, z.B. `[Text](Link)` für Links, Tooltips können mit der speziellen Syntax `[Text]{Tooltip}` erstellt werden.
 ]
 
 ---
 
 ### Fragen
 
-**Standardwerte**
-
-* Für Fragen können Standardwerte als Text oder als Option vorgegeben werden.
-* Der Standardwert wird für die Nutzenden initial angezeigt, und beim erstmaligen Speichern übernommen.
-
-**Optionale Fragen**
-
-* Fragen können als optional markiert werden und werden dann entsprechend für die Nutzenden markiert.
-
-**Datei-Upload**
-
-* Es können Datei-Uploads konfiguriert werden, um zusätzliches Material wie Grafiken oder Dokumente hochzuladen. Files werden auf dem Server gespeichert und können via Aufgabe versendet werden.
+* Für Fragen können **Standardwerte** als Text oder als Option vorgegeben werden. Der Standardwert wird für die Nutzenden initial angezeigt, und beim erstmaligen Speichern übernommen.
+* Fragen können als **optional** markiert werden und werden dann entsprechend für die Nutzenden gekennzeichnet.
+* Es können **Datei-Uploads** konfiguriert werden, um zusätzliches Material wie Grafiken oder Dokumente hochzuladen. Files werden auf dem Server gespeichert und können via Aufgabe versendet werden.
 
 ---
 
@@ -141,7 +132,7 @@ class: title, center, middle
 
 .smaller[
 * Text
-* Textfelt
+* Textfeld
 * Ja/Nein
 * Ankreuzfelder
 * Radio Buttons
@@ -182,10 +173,10 @@ Wert-Typen sind noch nicht vollständig implementiert. In der Zukunft sollen sie
 ]
 
 .screen-text[
-* Fragensets sind immer einem Abschnitt zugeordnet
-* Fragensets können eigene Hilfetexte haben
-* Fragensets können als **Sammlung** markiert sein, dann sollte ein Attribut zugeordnet sein
-* Fragensets können **geschachtelt** werden, um Hierarchien abzubilden (z.B. für DataCite)
+* Fragensets sind immer einem Abschnitt zugeordnet.
+* Fragensets können eigene Hilfetexte haben.
+* Fragensets können als **Sammlung** markiert sein, dann sollte ein Attribut zugeordnet sein.
+* Fragensets können **geschachtelt** werden, um Hierarchien abzubilden (z.B. für DataCite).
 ]
 
 ---
@@ -197,7 +188,7 @@ Wert-Typen sind noch nicht vollständig implementiert. In der Zukunft sollen sie
 ]
 
 * In Fragensets die als Sammlung markiert sind werden die gleichen Fragen für verschiedene **Sets** (z.B. für verschiedene Datensätze) beantwortet.
-* Es *sollte* ein Attribut für das Fragenset-Attribut zugeordnet sein (z.B. `project/dataset/id`).
+* Es *sollte* ein Attribut für das Fragenset-Attribut zugeordnet sein (z.B. `project/dataset/id`). Dann kann ein Name für das Set durch die Nutzenden eingegeben werden, sonnst hat das Set nur eine Nummer, z.B. `#1`.
 * Für jedes Set wird ein Wert für das Fragenset-Attribut angelegt.
 ---
 
@@ -208,8 +199,8 @@ Wert-Typen sind noch nicht vollständig implementiert. In der Zukunft sollen sie
 ]
 
 .screen-text[
-* Sets werden mit Hilfe von Tabs dargestellt
-* Sets können durch die Nutzenden angelegt, umbenannt und gelöscht werden
+* Sets werden mit Hilfe von Tabs dargestellt.
+* Sets können durch die Nutzenden angelegt, umbenannt und gelöscht werden.
 ]
 
 ---
@@ -233,7 +224,7 @@ Wert-Typen sind noch nicht vollständig implementiert. In der Zukunft sollen sie
 ]
 
 .screen-text[
-* Geschachtelte Fragensets werden vertikal untereinander dargestellt
+* Geschachtelte Fragensets werden vertikal untereinander dargestellt.
 * Geschachtelte Fragensets die als Sammlung markiert sind verfügen über eigene Buttons zum Erstellen und Löschen von Sets.
 ]
 
@@ -260,9 +251,9 @@ Wert-Typen sind noch nicht vollständig implementiert. In der Zukunft sollen sie
 ]
 
 .screen-text[
-* Attribute werden im Domäne-Management verwaltet
-* Wie zuvor haben Admins und die Gruppen *Editor* und *Reviewer* Zugriff
-* Attribute können erstellt, editiert, kopiert, exportiert und importiert werden
+* Attribute werden im Domäne-Management verwaltet.
+* Wie zuvor haben Admins und die Gruppen **Editor** und **Reviewer** Zugriff.
+* Attribute können erstellt, editiert, kopiert, exportiert und importiert werden.
 ]
 
 ---
@@ -274,8 +265,8 @@ Wert-Typen sind noch nicht vollständig implementiert. In der Zukunft sollen sie
 ]
 
 .screen-text[
-* Im Prinzip haben außer ihrem Schlüssen keine weiteren Eigenschaften
-* Durch Setzen eines Übergeordneten Attributs ergibt sich der Domänen-Baum
+* Im Prinzip haben Attribute außer ihrem Schlüssen keine weiteren Eigenschaften.
+* Durch das Setzen eines übergeordneten Attributs ergibt sich der Domänen-Baum.
 ]
 ---
 
@@ -286,8 +277,8 @@ Wert-Typen sind noch nicht vollständig implementiert. In der Zukunft sollen sie
 ]
 
 .screen-text[
-* Optionen dienen dazu, feste Antwortmöglichkeiten für Fragen bereitzustellen
-* Sie werden mit Radio Buttons, Ankreuzboxen, Select-Drowdown-Menus oder dem Autocomplete Widget genutzt
+* Optionen dienen dazu, feste Antwortmöglichkeiten für Fragen bereitzustellen.
+* Sie werden mit Radio Buttons, Ankreuzboxen, Select-Drowdown-Menus oder dem Autocomplete Widget genutzt.
 ]
 
 ---
@@ -298,7 +289,7 @@ Wert-Typen sind noch nicht vollständig implementiert. In der Zukunft sollen sie
     ![](img/fig/options.svg)
 ]
 
-* Einzelne Optionen in Optionensets organisiert, die wiederum Fragen im Fragenkatalog zugeordnet werden. Werte speichern Referenzen auf Optionen.
+* Einzelne Optionen werden in Optionensets organisiert, die wiederum Fragen im Fragenkatalog zugeordnet werden. Werte speichern Referenzen auf Optionen.
 
 ---
 
@@ -309,9 +300,9 @@ Wert-Typen sind noch nicht vollständig implementiert. In der Zukunft sollen sie
 ]
 
 .screen-text[
-* Optionensets und Optionen werden im Optionen-Management verwaltet
-* Wie zuvor haben Admins und die Gruppen *Editor* und *Reviewer* Zugriff
-* Optionensets und Optionen können erstellt, editiert, kopiert, exportiert und importiert werden
+* Optionensets und Optionen werden im Optionen-Management verwaltet.
+* Wie zuvor haben Admins und die Gruppen **Editor** und **Reviewer** Zugriff.
+* Optionensets und Optionen können erstellt, editiert, kopiert, exportiert und importiert werden.
 ]
 
 
@@ -325,7 +316,7 @@ Wert-Typen sind noch nicht vollständig implementiert. In der Zukunft sollen sie
 
 .screen-text[
 * Für Optionensets kann ein Wert für die Reihenfolge angegeben werden, der aber nur für den Fall relevant ist, wenn einer Frage mehrere Optionensets zugeordnet werden.
-* Falls **Optionset-Provider** (Plugins für Optionensets) konfiguriert sind können sie dem Optionenset zugeordnet werden
+* Falls **Optionset-Provider** (Plugins für Optionensets) konfiguriert sind können sie dem Optionenset zugeordnet werden.
 ]
 
 ---
@@ -337,16 +328,10 @@ Wert-Typen sind noch nicht vollständig implementiert. In der Zukunft sollen sie
 ]
 
 .screen-text[
-* Optionen werden immer einem Optionenset zugeordnet
-* Wenn **Zusätzliche Eingabe** markiert ist, kann zusätzlicher Freitext eingegeben werden
-* Der dargestellte Text wird per Sprache eingegeben
+* Optionen werden immer einem Optionenset zugeordnet.
+* Wenn **Zusätzliche Eingabe** markiert ist, kann zusätzlicher Freitext eingegeben werden.
+* Der dargestellte Text wird per Sprache eingegeben.
 ]
-
----
-
-class: center, middle
-
-##### Pause
 
 ---
 
@@ -391,9 +376,9 @@ class: title, center, middle
 ]
 
 .screen-text[
-* Bedingungen werden in einem separaten Management verwaltet
-* Wie zuvor haben Admins und die Gruppen *Editor* und *Reviewer* Zugriff
-* Bedingungen können erstellt, editiert, kopiert, exportiert und importiert werden
+* Bedingungen werden in einem separaten Management verwaltet.
+* Wie zuvor haben Admins und die Gruppen **Editor** und **Reviewer** Zugriff.
+* Bedingungen können erstellt, editiert, kopiert, exportiert und importiert werden.
 ]
 
 
@@ -407,7 +392,7 @@ class: title, center, middle
 
 .screen-text[
 * Bedingungen haben eine **Quelle** (das Attribut das ausgewertet wird), eine **Verknüpfung**, und ein **Ziel**, das entweder ein Freitext oder eine bestimmte Option sein kann.
-* Die Bedingung trifft dann zu, wenn im Projekt eine Wert eingegeben wurde, bei dem die Verknüpfung mit dem Ziel wahr ist.
+* Die Bedingung trifft dann zu, wenn im Projekt ein Wert eingegeben wurde, bei dem die Verknüpfung mit dem Ziel wahr ist.
 ]
 
 
@@ -415,9 +400,10 @@ class: title, center, middle
 
 ### Bedingungen
 
-* Bedingungen können Fragensets oder Fragen zugeordnet werden
-* Fragensets bei denen die Bedingungen nicht zutreffen werden im Interview übersprungen
-* Fragen bei denen die Bedingungen nicht zutreffen werden ausgeblendet
+* Bedingungen können Fragensets, Fragen oder Optionensets zugeordnet werden.
+* Fragensets bei denen die Bedingungen nicht zutreffen werden im Interview übersprungen.
+* Fragen bei denen die Bedingungen nicht zutreffen werden ausgeblendet.
+* Optionensets bei denen die Bedingungen nicht zutreffen werden nicht angezeigt.
 
 ---
 
@@ -429,7 +415,7 @@ class: title, center, middle
 
 .screen-text[
 * Ansichten werden genutzt um die Eingaben der Nutzenden in einer anderen Form wieder auszugeben.
-* In der Regel wird dies für Datenmanagementplan-Vorlagen von Förderorganisationen genutzt
+* In der Regel wird dies für Datenmanagementplan-Vorlagen von Förderorganisationen genutzt.
 ]
 
 ---
@@ -441,10 +427,10 @@ class: title, center, middle
 ]
 
 .screen-text[
-* Ansichten werden in einem separaten Management verwaltet
-* Wie zuvor haben Admins und die Gruppen *Editor* und *Reviewer* Zugriff
-* Ansichten können erstellt, editiert, kopiert, exportiert und importiert werden
-* Ansichten können wie Kataloge über das **Verfügbar**-Flag, sowie Gruppen und Sites eingeschränkt werden
+* Ansichten werden in einem separaten Management verwaltet.
+* Wie zuvor haben Admins und die Gruppen **Editor** und **Reviewer** Zugriff.
+* Ansichten können erstellt, editiert, kopiert, exportiert und importiert werden.
+* Ansichten können wie Kataloge über das **Verfügbar**-Flag, sowie **Gruppen** und **Sites** eingeschränkt werden.
 ]
 
 ---
@@ -456,10 +442,9 @@ class: title, center, middle
 ]
 
 .screen-text[
-* Für das Editieren der Templates gibt es ein eigenes Modal
-* Die Templates der Ansichten werden mit Hilfe der Django Template Syntax in HTML geschrieben
-* RDMO spezifische `view_tags` dienen dazu, die Werte des Projektes über ihr Attribut anzusprechen
-* Die gerenderten HTML Ansichten können über Pandoc in verschiedene Formate exportiert werden
+* Für das Editieren der **Templates** gibt es ein eigenes Dialogfeld.
+* Die Templates der Ansichten werden mit Hilfe der Django Template Syntax in HTML geschrieben.
+* RDMO spezifische `view_tags` dienen dazu, die Werte des Projektes über ihr Attribut anzusprechen.
 ]
 
 ---
@@ -499,7 +484,7 @@ Mehr Beispiele: https://rdmo.readthedocs.io/en/latest/management/views.html.
 ### Ansichten
 
 * Über [django-mathfilters](https://pypi.org/project/django-mathfilters/) kann auch mit Werten gerechnet werden.
-* Ansichten können über [Pandoc](https://pandoc.org/) exportiert werden.
+* Die gerenderten HTML Ansichten können über [Pandoc](https://pandoc.org/) in verschiedene Formate exportiert werden.
 * Für spezielle Layouts können Musterdokumente für `.docx` und `.odt` angelegt werden.
     * <https://rdmo.readthedocs.io/en/latest/configuration/export-formats.html>
 * Plugins für frei programmierbare Ansichten sind in Planung.
@@ -513,8 +498,8 @@ Mehr Beispiele: https://rdmo.readthedocs.io/en/latest/management/views.html.
 ]
 
 .screen-text[
-* Aufgaben haben einen Titel und einen Text und werden mit Bedingungen verknüpft
-* Wenn eine der Bedingungen zutrifft, wird die Aufgabe in User-Interface angezeigt
+* Aufgaben haben einen Titel und einen Text und werden mit Bedingungen verknüpft.
+* Wenn eine der Bedingungen zutrifft, wird die Aufgabe in User-Interface angezeigt.
 ]
 
 ---
@@ -522,10 +507,9 @@ Mehr Beispiele: https://rdmo.readthedocs.io/en/latest/management/views.html.
 ### Aufgaben
 
 * Der Status einer Aufgabe im Projekt kann durch die User verändert werden.
-* Über einen Zeitrahmen können, basierend auf vorhergehenden Werten zu bestimmten Attributen, Anfangs- und Enddaten für eine Aufgabe konfiguriert werden.
-
+* Über einen **Zeitrahmen** können, basierend auf vorhergehenden Werten zu bestimmten Attributen, Anfangs- und Enddaten für eine Aufgabe konfiguriert werden.
 * Aufgaben können verschickt werden:
-    * an fest konfigurierte und/oder frei wählbare Emailaddressen, oder
+    * an fest konfigurierte und/oder frei wählbare Email-Addressen, oder
     * über eine Integration in ein Projekt-Management-Tool.
 * Über Webhooks können externe Services den Status einer Aufgabe in RDMO ändern.
 * Integrationen werden über Plugins realisiert (z.Z. GitHub und GitLab).
@@ -544,17 +528,11 @@ Mehr Beispiele: https://rdmo.readthedocs.io/en/latest/management/views.html.
 ]
 
 .screen-text[
-* Aufgaben werden in einem separaten Management verwaltet
-* Wie zuvor haben Admins und die Gruppen *Editor* und *Reviewer* Zugriff
-* Aufgaben können erstellt, editiert, kopiert, exportiert und importiert werden
-* Aufgaben können wie Kataloge über das **Verfügbar**-Flag, sowie Gruppen und Sites eingeschränkt werden
+* Aufgaben werden in einem separaten Management verwaltet.
+* Wie zuvor haben Admins und die Gruppen **Editor** und **Reviewer** Zugriff.
+* Aufgaben können erstellt, editiert, kopiert, exportiert und importiert werden.
+* Aufgaben können wie Kataloge über das **Verfügbar**-Flag, sowie Gruppen und Sites eingeschränkt werden.
 ]
-
----
-
-class: center, middle
-
-##### Pause
 
 ---
 
@@ -723,13 +701,6 @@ class CustomExport(Export):
 
 ---
 
-class: center, middle
-exclude: true
-
-##### Pause
-
----
-
 class: title, center, middle
 
 .rdmo-logo[
@@ -776,7 +747,9 @@ Für die Nutzung der API können **Tokens** im Admin-Interface erstellt werden.
     ![](img/screens/sites.png)
 ]
 
-Normalerweise gibt **ein** Eintrag den Namen (rechts oben in der Navigation) und die URL der RDMO Instanz an. Im Multi-Site-Betrieb können mehrere RDMO Sites auf einem Server und mit einer Datenbank betrieben werden. Kataloge, Ansichten und Aufgaben können dann für bestimmte Sites freigegeben werden. Die Sites verfügen über getrennte `rdmo-app` Verzeichnisse und können verschiedene Themes haben.
+Normalerweise gibt es **einen** Eintrag mit dem Namen (rechts oben in der Navigation) und der URL der RDMO Instanz.
+
+Im Multi-Site-Betrieb können mehrere RDMO Sites auf einem Server und mit einer Datenbank betrieben werden. Kataloge, Ansichten und Aufgaben können dann für bestimmte Sites freigegeben werden. Die Sites verfügen über getrennte `rdmo-app` Verzeichnisse und können verschiedene Themes haben.
 
 ---
 
@@ -801,7 +774,7 @@ rdmo-up
 └── vendor
 ```
 
-Es bietet sich an, für lokale Anpassungen eine eigene Django-App zu implementieren, z.B. hier `rdmo_theme`. Die App enthält das Theme, kann aber Logik enthalten. Durch Anpassungen an der `urls.py` können zusätzliche Webseiten hinzugefügt werden.
+Es bietet sich an, für lokale Anpassungen eine eigene Django-App zu implementieren, z.B. hier `rdmo_theme`. Die App enthält das Theme, kann aber auch zusätzliche Logik enthalten. Durch Anpassungen an der `urls.py` können zusätzliche Webseiten hinzugefügt werden.
 
 ---
 
