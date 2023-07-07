@@ -10,7 +10,7 @@ class: title, center, middle
 
 ---
 
-Die Bereitstellung dieser Folien wurde von der [Universität Potsdam](https://www.uni-potsdam.de/), dem [Zuse-Institut Berlin (ZIB)](https://www.zib.de) und der [ZB MED](https://www.zbmed.de/) ermöglicht. Sie können frei nachgenutzt werden.
+Die Bereitstellung dieser Folien wurde von der [Universität Potsdam](https://www.uni-potsdam.de/), dem [Zuse-Institut Berlin (ZIB)](https://www.zib.de), der [ZB MED](https://www.zbmed.de/) und der [Humboldt-Universität zu Berlin](https://www.hu-berlin.de) ermöglicht. Sie können frei nachgenutzt werden.
 
 Es gilt die [CC0 1.0 Universell (CC0 1.0) Public Domain Dedication](https://creativecommons.org/publicdomain/zero/1.0/deed.de).
 
@@ -536,6 +536,34 @@ Mehr Beispiele: https://rdmo.readthedocs.io/en/latest/management/views.html.
 
 ---
 
+### Änderungen in RDMO 2.0
+
+.screen-img[
+    ![](img/screens/catalogs-management-v2.png)
+]
+
+.screen-text[
+* Die verschiedenen Interfaces werden durch ein **vereinheitlichtes Interface** ersetzt.
+* Fragensets werden zu **Seiten**, da sie immer eine Seite im Interview darstellen. Nur Fragensets-in-Fragensets heißen immer noch Fragensets.
+* Im Multi-Site-Setup können **Berechtigungen** auf Elemente per Seite eingeschränkt werden.
+]
+
+---
+
+### Änderungen in RDMO 2.0
+
+.screen-img[
+    ![](img/screens/catalog-management-v2.png)
+]
+
+.screen-text[
+* Kataloge, Abschnitte, ... sind **von einander entkoppelt** und werden einzeln zugeordnet.
+* Kataloge werden nicht mehr Abschnitten zugeordnet sondern Kataloge bekommen eine Liste von Abschnitten zugeordnet.
+* Ein Abschnitt kann sich so in verschiedenen Katalogen befinden. Elemente müssen nicht immer kopiert werden.
+]
+
+---
+
 class: title, center, middle
 
 .rdmo-logo[
@@ -613,22 +641,9 @@ https://rdmorganiser.github.io/terms/views/horizon2020
 * Issues zu Content-Fragen: https://github.com/rdmorganiser/rdmo-catalog/issues
 * Content-Gruppe koordiniert den Austausch der Inhalte:
     * Slack-Channel: *#content*
-    * Webkonferenzen an jedem 2. Donnerstag im Monat (und bei Bedarf)
     * Sprecherin: Kerstin Wedlich-Zachodin (KIT)
 * Workflow zur Kuration der Inhalte über Pull-Requests und Releases wird z.Z. etabliert.
 * Im Bereich `shared` wird Content gesammelt der in der Community erstellt wurde, aber nicht zentral gepflegt wird.
-
----
-
-### Vorhandene Materialien
-
-* **RDMO:**
-    * RDMO Domänenmodell (Startpunkt für alle!), Fragenkataloge (RDMO, RDMO-Kurz, DCC, SNF), Optionen, Bedingungen, Ansichten, Aufgaben
-* **fodako:**: Kataloge aus dem DFG Kontext.
-* **HeFDI:** Einsteiger:innen-freundlicher Katalog für Servicestellen
-* **NFDI4ING:** Fragenkatalog: "Mechanical Engineering" (kein README)
-* **EmiMin:** Emissionsminderung in der Nutztierhaltung
-* **UB FAU Erlangen Nürnberg:** Eins-zu-Eins Horizon2020 Fragenkatalog, Zusätzliche Fragen aus ["Förderkriterien für Wissenschaftliche Editionen in der Literaturwissenschaft" der DFG](https://www.dfg.de/download/pdf/foerderung/antragstellung/forschungsdaten/foerderkriterien_editionen_literaturwissenschaft.pdf).
 
 ---
 
@@ -735,7 +750,7 @@ Site-Manager können alle Projekte (einer Site) lesen und schreiben.
 
 **Zusätzliche Felder** dienen der Erweiterung des RDMO internen User-Models (und müssen evtl. bei der Registrierung angegeben werden.).
 
-Für die Nutzung der API können **Tokens** im Admin-Interface erstellt werden.
+Für die Nutzung der API können **Tokens** im Admin-Interface erstellt werden. Wenn freigeschaltet, können Tokens auch durch die User selbständig angelegt werden.
 
 **Content** und **Nutzerdaten** können auch über das Admin-Interface editiert werden.
 
@@ -775,6 +790,24 @@ rdmo-up
 ```
 
 Es bietet sich an, für lokale Anpassungen eine eigene Django-App zu implementieren, z.B. hier `rdmo_theme`. Die App enthält das Theme, kann aber auch zusätzliche Logik enthalten. Durch Anpassungen an der `urls.py` können zusätzliche Webseiten hinzugefügt werden.
+
+---
+
+### Settings
+
+Die Datei `config/settings/local.py` dient der Konfiguration der verschiedenen, optionalen Features von RDMO (und dem genutzten Django-Framework).
+
+Die verschiedenen `settings` sind (fast) alle im RDMO-Quellcode in [rdmo/core/settings.py](https://github.com/rdmorganiser/rdmo/blob/master/rdmo/core/settings.py) vorkonfiguriert und können in `config/settings/local.py` überschrieben werden.
+
+In der Regel werden dort mindestens der `SECRET_KEY`, die Datenbankverbindung `DATABASES` und die Authentifizierungsmöglichkeiten spezifiziert. Andere Beispiele sind:
+
+```python
+PROJECT_ISSUES = False
+PROJECT_VIEWS = True
+PROJECT_QUESTIONS_AUTOSAVE = True
+```
+
+Im Standard-Setup ist `config/settings/local.py` nicht versioniert. Alternativ können aber hostspezifische Teile der `settings` über eine `.env` Datei als Umgebungsvariablen eingelesen werden (z.B. über `os.getenv('SECRET_KEY')`). 
 
 ---
 
